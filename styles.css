@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("fonts/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Stelle sicher, dass das gesamte HTML-Dokument den gesamten verfügbaren Platz ausfüllt */
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px; /* Vergrößert die Navbar durch mehr Innenabstand */
+  background: linear-gradient(to right, #164293, #89037a);
+  color: white;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px; /* Verkleinert das Logo */
+  margin-right: 25px; /* Abstand zwischen Logo und "Documentation" */
+}
+
+.navbar-text {
+  font-size: 20px; /* Optional: Größe des Textes anpassen */
+  font-weight: bold;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  height: 24px; /* Größe der Icons */
+  margin-left: 20px; /* Abstand zwischen den Icons */
+  cursor: pointer;
+}
+
+/* Der Hauptcontainer der Seite, der den Platz zwischen Navbar und Footer einnimmt */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 0 20px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #164293;
+}
+
+/* Der Footer ist unten fixiert und nimmt nur so viel Platz wie nötig ein */
+.footer {
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-links span {
+  color: #333;
+}
+
+.copyright {
+  font-weight: bold;
+}
