@@ -5,6 +5,36 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Manrope Light";
+  src: url("fonts/Manrope-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope SemiBold";
+  src: url("fonts/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*Variablen*/
+:root
+{
+	--etas-blue: #164293;
+	--etas-purple: #89037a;
+	--etas-light-purple: #9373b1;
+	--etas-red: #e5004a;
+	--etas-gray-10: #eeeff0;
+	--etas-gray-20: #dee0e2;
+	--etas-gray-70: #8b9299;
+	--etas-gray: #5a646e;
+	--black: #000000;
+	--white: #ffffff;
+}
+
 /* Stelle sicher, dass das gesamte HTML-Dokument den gesamten verfügbaren Platz ausfüllt */
 html,
 body {
@@ -22,7 +52,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px; /* Vergrößert die Navbar durch mehr Innenabstand */
-  background: linear-gradient(to right, #164293, #89037a);
+  background: linear-gradient(to right, var(--etas-blue), var(--etas-purple));
   color: white;
 }
 
@@ -38,7 +68,6 @@ body {
 
 .navbar-text {
   font-size: 20px; /* Optional: Größe des Textes anpassen */
-  font-weight: bold;
 }
 
 .navbar-icons {
@@ -56,9 +85,24 @@ body {
 .container {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+.internal-use-notice {
+  font-size: 50px;
+  font-family: 'Manrope SemiBold';
+  color: var(--etas-red);
+  margin-bottom: 80px; 
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .card {
