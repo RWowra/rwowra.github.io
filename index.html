@@ -5,76 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="images/EtasFavicon.png" type="image/png" />
+    <link rel="icon" href="images/favicon.ico" type="image/png" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <header class="navbar">
-      <div class="navbar-left">
-        <img src="images/ETAS_Logo_White.svg" alt="Logo" class="logo" />
-        <span class="navbar-text">Documentation</span>
-      </div>
-      <div class="navbar-icons">
-        <img src="images/funnel.svg" alt="Search" class="navbar-icon" />
-        <img src="images/caret-right.svg" alt="Search" class="navbar-icon" />
-        <img
-          src="images/magnifying-glass.svg"
-          alt="Search"
-          class="navbar-icon"
-        />
-        <img src="images/globe.svg" alt="Language" class="navbar-icon" />
-        <img src="images/moon.svg" alt="Dark Mode" class="navbar-icon" />
+      <div class="container-header">
+        <div class="navbar-left">
+          <img src="images/ETAS_Logo_White.svg" alt="Logo" class="logo" />
+          <span class="navbar-text">Documentation</span>
+        </div>
       </div>
     </header>
 
+    <div class="container hero">
+      <div class="hero-text">
+        <div class="internal-use-notice">For internal use only!</div>
+        <h1>ETAS Online Documentation</h1>
+        <p>
+          Welcome to our documentation hub, your source for all essential
+          resources. Easily find what you need to support your projects and
+          enhance your team's productivity.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="images/Documentation.png" alt="Hero Image" />
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
     <div class="container">
-      <div class="internal-use-notice">For internal use only!</div>
       <div class="card-container">
-      <a
-        href="https://rwowra.github.io/doc-ehandbook/ehandbook/index.html"
-        class="card"
-      >
-        <img
-          src="images/ETAS_EHANDBOOK_BUILD_Digital.png"
-          alt="eHANDBOOK Icon"
-          class="icon"
-        />
-        <span class="text">eHANDBOOK</span>
-      </a>
-      <a
-        href="https://rwowra.github.io/LiMa/Content/Resources/Manual/LandingPage_LiMa.htm"
-        class="card"
-      >
-        <img
-          src="images/ETAS_Icon_Key_Gradient_Digital.png"
-          alt="LiMa Icon"
-          class="icon"
-        />
-        <span class="text">LiMa</span>
-      </a>
-      <a
-        href="https://rwowra.github.io/docs/Resources/Topic/Help.htm"
-        class="card"
-      >
-        <img
-          src="images/ETAS_COSYM_Digital.png"
-          alt="COSYM Icon"
-          class="icon"
-        />
-        <span class="text">COSYM</span>
-      </a>
+        <div class="card">
+          <div class="card-content">
+            <h2>Data acquisition & processing</h2>
+
+            <img
+              src="images/ETAS_Illustration_DAP.png"
+              alt="Card Image"
+              class="card-img"
+            />
+
+            <a href="#">ASCMO-MOCA<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <a href="#">ASCMO-STATIC & ASCMO-DYNAMIC<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <a href="https://rwowra.github.io/docs/Current/DataOperator_V1.5_EN.htm">Data Operator<i class="ph ph-arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h2>Software development & testing</h2>
+            <img
+              src="images/ETAS_Illustration_DEV.png"
+              alt="Card Image"
+              class="card-img"
+            />
+            <a href="https://rwowra.github.io/docs/Resources/Topic/Help.htm">COSYM<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <a href="https://rwowra.github.io/doc-ehandbook/ehandbook/index.html">EHANDBOOK<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <!--
+            <a href="#">LiMa<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <a href="#">COSYM<i class="ph ph-arrow-up-right"></i></a>
+            -->
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h2>Tool management</h2>
+            <img
+              src="images/Managed_Runtime.png"
+              alt="Card Image"
+              class="card-img"
+            />
+            <a href="https://rwowra.github.io/LiMa/Content/Resources/Manual/LandingPage_LiMa.htm">LiMa<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <!--
+            <a href="#">LiMa<i class="ph ph-arrow-up-right"></i></a>
+            <div class="card-divider"></div>
+            <a href="#">COSYM<i class="ph ph-arrow-up-right"></i></a>
+            -->
+          </div>
+        </div>
       </div>
     </div>
 
     <footer class="footer">
-      <div class="footer-content">
-        <span class="copyright">© 2024 ETAS GmbH</span>
-        <div class="footer-links">
-          <a href="#">Terms of Use / Legal Notice</a>
+      <div class="container-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <span class="copyright">© 2025 ETAS GmbH</span>
+          </div>
+          <div class="footer-right">
+            <a
+              href="https://www.etas.com/ww/en/terms-of-use-legal-notice/"
+              target="_blank"
+              >Terms of use / Legal notice</a
+            >
+            <a
+              href="https://www.etas.com/ww/en/data-protection-policy/"
+              target="_blank"
+              >Privacy policy</a
+            >
+          </div>
         </div>
-        <a href="#">Privacy Policy</a>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
