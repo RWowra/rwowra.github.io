@@ -17,7 +17,7 @@
   src: url(./fonts/FiraCode-SemiBold.ttf);
 }
 
-/* Allgemeine Layout-Anpassungen */
+
 :root {
   --header-height: 56px;
   --container-width: 1330px;
@@ -49,14 +49,16 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  align-items: flex-start;
 }
 
 .internal-use-notice {
   font-size: 50px;
   font-family: 'Manrope SemiBold';
   color: var(--etas-red);
-  margin-bottom: 80px; 
   text-align: center;
 }
 
@@ -105,26 +107,33 @@ body {
   font-weight: normal;
 }
 
-/* Hero-Bereich */
+/* Hero area */
 .hero {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 525px;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: auto;
+  width: 100%;
+  padding: 40px 20px 10px 20px;
+  flex-grow: 0;
+  gap: 40px;
 }
 
 .hero-text {
   max-width: 40%;
   z-index: 2;
+  flex-grow: 1;
   position: relative;
+  align-items: center;
 }
 
 .hero-text h1 {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 600;
-  line-height: 48px;
+  line-height: 42px;
   margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 .hero-text p {
@@ -133,9 +142,16 @@ body {
   line-height: 28px;
 }
 
-.hero-image img {
+.hero-image {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: flex-start;
   max-width: 100%;
-  max-height: 100%;
+}
+
+.hero-image img {
+  max-width: 55%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -154,8 +170,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 49px;
+  gap: 48px;
   text-align: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .card {
@@ -164,7 +182,7 @@ body {
   border-radius: 8px;
   border: 1px solid var(--gray-50-color);
   background: white;
-  padding: 19px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,20 +289,24 @@ body {
 }
 
 
-/* 2 Cards pro Zeile bei mittlerer Größe */
+/* 2 cards per column */
 @media (max-width: 900px) {
   .card-container {
     justify-content: center;
   }
 }
 
-/* 1 Card pro Zeile auf kleinen Bildschirmen */
+
+
+/* 1 card per column */
 @media (max-width: 600px) {
   .card-container {
     justify-content: center;
   }
 }
-/* Auf kleineren Bildschirmen  */
+
+
+/**/
 @media (max-width: 870px) {
   .container.hero {
     flex-direction: column;
@@ -301,22 +323,37 @@ body {
     order: -1;
   }
 }
-/* Footer-Anpassungen bei Bildschirmgrößen kleiner als 667px */
+
+/*Footer padding for screens smaller than 1300px*/
+@media (max-width: 1300px) {
+  .container-footer {
+    padding: 0 16px; 
+  }
+}
+
+
+
+/* Footer adjustments for screen sizes smaller than 667px */
 @media (max-width: 667px) {
+  .footer {
+    height: auto; 
+    padding: 8px 0; 
+  }
+
   .footer-content {
-    flex-direction: column; /* Stellt sicher, dass die Footer-Elemente untereinander sind */
-    align-items: center; /* Zentriert die Footer-Elemente */
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
   }
 
   .footer-left,
   .footer-right {
-    display: block; /* Sorgt dafür, dass die beiden Container untereinander statt nebeneinander sind */
-    text-align: center; /* Zentriert den Text innerhalb des Containers */
+    display: block;
+    text-align: center;
   }
 
   .footer a {
-    display: block; /* Stellt sicher, dass die Links untereinander angeordnet sind */
-    margin: 4px 0; /* Fügt einen kleinen Abstand zwischen den Links hinzu */
+    display: block;
+    margin: 2px 0;
   }
 }
