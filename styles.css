@@ -17,7 +17,6 @@
   src: url(./fonts/FiraCode-SemiBold.ttf);
 }
 
-
 :root {
   --header-height: 56px;
   --container-width: 1330px;
@@ -57,7 +56,7 @@ body {
 
 .internal-use-notice {
   font-size: 50px;
-  font-family: 'Manrope SemiBold';
+  font-family: "Manrope SemiBold";
   color: var(--etas-red);
   text-align: center;
 }
@@ -144,7 +143,7 @@ body {
 
 .hero-image {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: flex-start;
   max-width: 100%;
 }
@@ -155,9 +154,9 @@ body {
   object-fit: contain;
 }
 
-/* Divider */
 .divider {
-  width: 1295px;
+  max-width: 1295px;
+  width: 100%;
   padding: 0 20px;
   height: 1px;
   background-color: var(--divider-color);
@@ -288,7 +287,6 @@ body {
   color: var(--link-hover-color);
 }
 
-
 /* 2 cards per column */
 @media (max-width: 900px) {
   .card-container {
@@ -296,15 +294,12 @@ body {
   }
 }
 
-
-
 /* 1 card per column */
 @media (max-width: 600px) {
   .card-container {
     justify-content: center;
   }
 }
-
 
 /**/
 @media (max-width: 870px) {
@@ -327,17 +322,15 @@ body {
 /*Footer padding for screens smaller than 1300px*/
 @media (max-width: 1300px) {
   .container-footer {
-    padding: 0 16px; 
+    padding: 0 16px;
   }
 }
-
-
 
 /* Footer adjustments for screen sizes smaller than 667px */
 @media (max-width: 667px) {
   .footer {
-    height: auto; 
-    padding: 8px 0; 
+    height: auto;
+    padding: 8px 0;
   }
 
   .footer-content {
