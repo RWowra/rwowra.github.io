@@ -155,7 +155,7 @@ function initDropdown(currentEl, dropdownEl, isVersion) {
 
         // Determine target version or language based on what is being switched
         if (isVersion) {
-          targetVersion = item.path.split("/")[3];
+          targetVersion = item.version;
         } else {
           targetLanguage = item.code;
         }
