@@ -1,0 +1,529 @@
+/*<meta />*/
+
+/*Imports the main css*/
+
+@import url('../Stylesheets/ETAS_flare_EN.css');
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/*===========================================================================================================================================================
+===========================================================================================================================================================*/
+
+/*== Home Page General Styles ==*/
+
+.inner-wrap .tab-bar .nav-search	/*Prevents the searchbar in the header from appearing on the landing page*/
+{
+	display: none;
+}
+
+body
+{
+	background-color: #fafafa;
+	font-family: "Manrope", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.subtitle
+{
+	text-align: center;
+}
+
+/*== Home header bar styles ==*/
+
+.inner-wrap .tab-bar .nav-search	/*Prevents the search in the header from appearing on the home page*/
+{
+	display: none;
+}
+
+.inner-wrap .main-section > .outer-row
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+/*== home page masterpage styles ==*/
+
+div.height-container-sidenav
+{
+	display: flex;
+	flex-direction: column;
+}
+
+div.home-container	/*wraps the content on the home page*/
+{
+	width: 95%;
+	margin: auto;
+	margin-top: 0%;
+}
+
+.height-container-sidenav
+{
+	padding: 0;
+}
+
+.body-container
+{
+	padding: 0;
+	/*Overrides padding set in the skin*/
+}
+
+/*== Home Page Topic Hero section ==*/
+
+.topic-hero
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5px;
+	height: auto;
+	width: 90%;
+	margin: auto;
+}
+
+.topic-hero img
+{
+	width: 160px;
+	margin: 16px;
+}
+
+.guide-image img
+{
+	width: 50%;
+	height: 50%;
+}
+
+h1
+{
+	font-size: 40px;
+	line-height: 1.4;
+	color: #164293;
+	font-family: "Manrope Light", Arial;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+span.h1
+{
+	font-family: "Manrope ExtraBold", "Arial Black";
+	line-height: 100%;
+	color: #164293;
+}
+
+p.searchbar
+{
+	color: #ffffff;
+	font-family: "Manrope Light", Arial;
+	font-size: 2.5rem;
+	text-align: right;
+	line-height: 110%;
+}
+
+span.searchbar
+{
+	font-family: "Manrope ExtraBold", "Arial Black";
+}
+
+span.searchbar1
+{
+	color: #ffffff;
+	font-family: "Manrope Light", Arial;
+	text-align: right;
+	line-height: 110%;
+}
+
+div.searchbar
+{
+	width: clamp(350px, 80vw, 500px);
+	padding-left: 16px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top left;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+.search-bar
+{
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	border: 1px solid #164293;
+	border-radius: 20px;
+	height: 40px;
+}
+
+div.item1
+{
+	display: flex;
+	flex: 0 0 350px;
+	/*width: 350px;*/
+	height: 130px;
+	/*justify-content: flex-end;*/
+	align-items: flex-end;
+	padding-left: 2em;
+	padding-top: 1em;
+	text-align: right;
+}
+
+div.item2
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 130px;
+	flex: 1 0 auto;
+	width: min-content;
+	min-width: 200px;
+	/*flex-grow: 1;
+	flex-shrink: 0;*/
+}
+
+/* Hero auf kleinen Bildschirmen */
+
+@media (max-width: 979px)
+{
+	.topic-hero
+	{
+		flex-direction: column;
+		/* Übereinander bei kleineren Bildschirmen */
+		height: auto;
+		/* Höhe anpassen */
+	}
+
+	.text-and-search
+	{
+		max-width: 100%;
+		/* Text soll die ganze Breite einnehmen */
+		text-align: center;
+		/* Text zentrieren */
+	}
+
+	.home
+	{
+		max-width: 100%;
+		/* Text soll die ganze Breite einnehmen */
+		text-align: center;
+		/* Text zentrieren */
+	}
+
+	/* Das Bild soll immer noch oben sein und der Text unten */
+
+	.topic-hero img
+	{
+		order: -1;
+		/* Das Bild kommt jetzt über den Text */
+	}
+}
+
+/*== Home-tiles section ==*/
+/*== Elements for text contained within each home-tile ==*/
+
+p.tile-title
+{
+	color: #164293;
+	font-size: 25px;
+	font-family: "Manrope", Arial;
+	text-align: center;
+	line-height: 1.2;
+	mc-next-tag: p;
+	mc-next-class: tile-title;
+}
+
+p.tile-content
+{
+	font-family: "Manrope Light", Arial;
+	text-align: center;
+}
+
+img.tile
+{
+	margin-bottom: 7px;
+}
+
+/*Divider landing page*/
+
+div.solid
+{
+	border-bottom: solid 1px #dee0e2;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Flexboxes contianer that holds all tiles on the landing page*/
+
+div.flex-container
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+/*The tiles on the landing page */
+
+div.flex_item
+{
+	border-radius: 8px;
+	background: white;
+	width: 350px;
+	overflow: hidden;
+	border: 1px solid #eeeff0;
+}
+
+div.tile-header
+{
+	background: #f5f5f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 16px;
+}
+
+div.tile-header img
+{
+	width: 60px;
+	height: auto;
+}
+
+div.tile-body
+{
+	padding: 20px;
+	text-align: center;
+}
+
+div.tile-link
+{
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 8px;
+}
+
+div.tile-link a
+{
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	text-decoration: none;
+	color: #164293;
+}
+
+div.tile-link a:hover
+{
+	color: #4568a9;
+}
+
+div.tile-subtitle
+{
+	font-size: 1rem;
+	color: #666;
+	text-align: center;
+}
+
+/*Specifying the behavior of links in the div.flex_item. They shouldn't behave special because the entire div does.*/
+
+/*div.flex-item a:link, div.flex-item a:hover, div.flex-item a:visited, div.flex-item a:active
+{
+	color: var(--Black) !important;
+	text-decoration: none;
+}
+
+p.tile-content a:link, p.tile-content a:hover, p.tile-content a:visited,  p.tile-content a:active
+{
+	color: var(--Black) !important; 
+	text-decoration: none;
+}
+
+p.tile-title a:link, p.tile-title a:hover, p.tile-title a:visited,p.tile-title a:active
+{
+	color: var(--ETAScolor1) !important;
+	text-decoration: none;
+}*/
+
+/*== Home Page Footer ==*/
+
+div.home-footer
+{
+	background-image: linear-gradient(
+    to right,
+    var(--ETAScolor1),
+    var(--ETAScolor2)
+  );
+	padding: 1em;
+	width: 100%;
+	margin-bottom: 0px;
+	display: flex;
+	align-self: flex-end;
+}
+
+p.footerlanding
+{
+	font-family: "Manrope Light", Arial;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	line-height: 13pt;
+	color: #ffffff;
+}
+
+/*Styles the top of the HTML_Side skin*/
+
+nav.title-bar
+{
+	background-image: linear-gradient(
+    to right,
+    var(--ETAScolor1),
+    var(--ETAScolor2)
+  );
+}
+
+/*Styles the box of the TOC of the HTML_Side skin*/
+
+.sidenav-wrapper
+{
+	min-width: 400px;
+	width: 20%;
+}
+
+/*Fixes the image hover issue so that its centered*/
+
+.search-bar._Skins_SearchBarLandingPage.mc-component .search-filter:hover
+{
+	background-position: center center;
+}
+
+.search-bar._Skins_SearchBarLandingPage.mc-component
+{
+	display: block;
+	width: 100%;
+	height: 44px;
+}
+
+/*Keeps main section to max width*/
+
+.inner-wrap .main-section > .outer-row
+{
+	max-width: 1330px;
+	width: 100%;
+}
+
+/*Keeps container title bar to max width*/
+
+.off-canvas-wrapper-inner nav.title-bar .outer-row
+{
+	max-width: 1330px;
+	/*Breite des title containers*/
+}
+
+/*===========================================================================================================================================================
+Styles after this point are styles that are for specific mediums. If any additional styles are added to this template they will be listed after mediums.
+[@media tablet] declares styles that will apply when the screen is in tablet view
+[@media mobile] declares styles that will apply when the screen is in mobile view
+===========================================================================================================================================================*/
+
+@media only screen and (max-width: 1279px)
+{
+	div.search-home
+	{
+		margin-left: 0%;
+		width: 90%;
+	}
+
+	div.footer
+	{
+		padding-top: 10px;
+	}
+
+	/*Keeps main section to max width
+	.inner-wrap .main-section > .outer-row {
+
+	}
+
+	/*Keeps container title bar to max width
+
+	.off-canvas-wrapper-inner nav.title-bar .outer-row {
+
+	}*/
+}
+
+@media only screen and (max-width: 767px)
+{
+	MadCap|searchBarProxy.homeSearchBar
+	{
+		width: 100%;
+	}
+
+	.search,
+	.search-bar
+	{
+		height: auto;
+	}
+
+	h1
+	{
+		font-size: 2.4rem;
+	}
+
+	h2
+	{
+		font-size: 1.2rem;
+	}
+
+	div.topic-hero
+	{
+		text-align: center;
+	}
+
+	div.search-home
+	{
+		width: 80%;
+		margin-left: auto;
+	}
+
+	div.home-tiles-container
+	{
+		padding-bottom: 0;
+	}
+
+	div.home-master-page-footer > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	/*Keeps main section to max width
+	.inner-wrap .main-section > .outer-row {
+
+	}
+
+	/*Keeps container title bar to max width
+
+	.off-canvas-wrapper-inner nav.title-bar .outer-row {
+
+	}*/
+}
+

@@ -1,0 +1,209 @@
+/*<meta />*/
+
+@media print 
+{
+	/* Micro content skin styles */
+
+	.micro-content-truncated-mode .micro-response
+	{
+		overflow: hidden !important;
+	}
+
+	/* Hide Toolbar Topic proxy ans eLearning Toolbar proxy by default */
+
+	.buttons
+	{
+		display: none;
+	}
+
+	/* Menu styles */
+
+	ul.menu
+	{
+		display: none;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete ul
+	{
+		background-color: #ffffff;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item a
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-content
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-history
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item.auto-result-selected a
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item.auto-result-selected
+	{
+		background-color: #ececec;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-content.auto-result-selected
+	{
+		background-color: #ececec;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-history.auto-result-selected
+	{
+		background-color: #ececec;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item .auto-result-description
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-content .auto-result-description
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-history .auto-result-description
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item .auto-result-icon
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-content .auto-result-icon
+	{
+		background: transparent url('Images/icon-topic.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/icon-topic.png') no-repeat center center;
+		background-size: contain;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-history .auto-result-icon
+	{
+		background: transparent url('Images/icon-search.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/icon-search.png') no-repeat center center;
+		background-size: contain;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item .auto-result-phrase
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-content .auto-result-phrase
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-history .auto-result-phrase
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item .auto-result-phrase .search-result-highlight
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-content .auto-result-phrase .search-result-highlight
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-history .auto-result-phrase .search-result-highlight
+	{
+		
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li .auto-result-remove
+	{
+		background: transparent url('Images/icon-remove.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/icon-remove.png') no-repeat center center;
+		background-size: contain;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-auto-complete li.auto-result-item .auto-result-separator
+	{
+		
+	}
+
+	.search-bar._Skins_SearchBarLandingPage.mc-component
+	{
+		
+	}
+
+	.search-bar._Skins_SearchBarLandingPage.mc-component .search-field
+	{
+		background-color: #ffffff;
+	}
+
+	.search-bar._Skins_SearchBarLandingPage.mc-component .search-filter
+	{
+		background: #ffffff url('Images/ETAS_Config_Gray70_1.png') no-repeat center center;
+		-pie-background: #ffffff url('Skins/Default/Stylesheets/Components/Images/ETAS_Config_Gray70_1.png') no-repeat center center;
+	}
+
+	.search-bar._Skins_SearchBarLandingPage.mc-component .search-filter-wrapper.open
+	{
+		-pie-background: #ffffff url('Skins/Default/Stylesheets/Components/Images/ETAS_Config_Gray70_1.png') no-repeat center center;
+		background-color: #ffffff;
+		background-repeat: no-repeat;
+	}
+
+	.search-bar._Skins_SearchBarLandingPage.mc-component .search-filter:hover
+	{
+		background: #ffffff url('Images/ETAS_Config_Blue.png') no-repeat;
+		-pie-background: #ffffff url('Skins/Default/Stylesheets/Components/Images/ETAS_Config_Blue.png') no-repeat;
+	}
+
+	.search-bar._Skins_SearchBarLandingPage.mc-component .search-filter.selected
+	{
+		background: transparent url('Images/ETAS_Config_Purple_1.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/ETAS_Config_Purple_1.png') no-repeat center center;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-filter-content
+	{
+		background-color: #ffffff;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-filter-content ul li:hover
+	{
+		background-color: #ffffff;
+	}
+
+	._Skins_SearchBarLandingPage.mc-component .search-filter-content ul li button:focus
+	{
+		background-color: #ffffff;
+	}
+
+	.search-bar.search-bar-container._Skins_SearchBarLandingPage.mc-component .search-submit
+	{
+		background: transparent url('Images/magnifying-glass_gray.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/magnifying-glass_gray.png') no-repeat center center;
+	}
+
+	.search-bar.search-bar-container._Skins_SearchBarLandingPage.mc-component .search-submit:hover
+	{
+		background: transparent url('Images/magnifying-glass_blue.png') no-repeat center center;
+		-pie-background: transparent url('Skins/Default/Stylesheets/Components/Images/magnifying-glass_blue.png') no-repeat center center;
+	}
+}
+

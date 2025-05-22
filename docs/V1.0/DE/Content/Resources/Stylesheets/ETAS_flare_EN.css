@@ -1,0 +1,5512 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+@font-face 
+{
+	font-family: "Manrope";
+	src: url(../Fonts/Manrope-Regular.ttf);
+}
+
+@font-face 
+{
+	font-family: "Manrope SemiBold";
+	src: url(../Fonts/Manrope-SemiBold.ttf);
+}
+
+@font-face 
+{
+	font-family: "Manrope ExtraBold";
+	src: url(../Fonts/Manrope-ExtraBold.ttf);
+}
+
+@font-face 
+{
+	font-family: "Fira Code";
+	src: url(../Fonts/FiraCode-Regular.ttf);
+}
+
+@font-face 
+{
+	font-family: "Fira Code SemiBold";
+	src: url(../Fonts/FiraCode-SemiBold.ttf);
+}
+
+/* Variables */
+
+:root
+{
+	--ETAScolor1: #164293;
+	--ETAScolor2: #89037a;
+	--ETAScolor3: #9373b1;
+	--ETASred: #e5004a;
+	--ETASgray10: #eeeff0;
+	--ETASgray20: #dee0e2;
+	--ETASgray70: #8b9299;
+	--ETASgray: #5a646e;
+	--ETASgray300: #bdc1c5;
+	--ETASsurface50: #a7a7a7;
+	--ETASblue50: #e8ecf4;
+	--ETASblue100: #cce5f3;
+	--ETASblue700: #4568a9;
+	--ETASpurple50: #f3e6f2;
+	--ETASpurple100: #e7cde4;
+	--ETASmediumblue900: #007bc2;
+	--safety_red: #bd2024;
+	--safety_orange: #ff7900;
+	--safety-yellow: #ffe100;
+	--safety-blue: #004488;
+	--surface-50-color: #fafafa;
+	--Black: #000000;
+	--White: #ffffff;
+	--gray: #333;
+	--product: "Data Operator V1.0 de";
+}
+
+body	/*Styles the body which holds the content of a page*/
+{
+	color: #333;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-family: "Manrope";
+	mc-hidden: hidden;
+	line-height: 24px;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.height-container
+{
+	min-height: auto !important;
+	/* Setze die min-height (vom body) auf auto */
+}
+
+ul.sidenav li.is-accordion-submenu-parent > a span.submenu-toggle-container
+{
+	/*Adds a margin to the toggel item of the sidenav toc*/
+	margin-right: 4px;
+}
+
+div.GlossaryPageDefinition	/* Styles the definition of automatically generated glossary entries*/
+{
+	margin-bottom: 6pt;
+	font-family: "Manrope", Arial;
+	margin-left: 10mm;
+	mc-hidden: hidden;
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+div.MCMiniTocBox_0
+{
+	mc-hidden: hidden;
+	list-style-type: none;
+}
+
+div.GlossaryPageHeading	/* Styles the headings of the different sections of automatically generated glossary entries*/
+{
+	border-bottom-style: none;
+	margin-bottom: 6pt;
+	margin-top: 12pt;
+	font-weight: normal;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-hidden: hidden;
+	border-bottom-color: #000000;
+	line-height: 1.4;
+	font-size: 1.1rem;
+}
+
+div.GlossaryPageTerm	/* Styles the terms of automatically generated glossary entries*/
+{
+	margin-bottom: 6pt;
+	font-weight: normal;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-hidden: hidden;
+	line-height: 1.4;
+	font-size: 1rem;
+}
+
+div.TopicContent
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 25px;
+	mc-hidden: hidden;
+}
+
+div.no_break
+{
+	
+}
+
+/*Styles the hover effect of the MiniTOC entries 1-9*/
+
+a.MiniTOC1:hover,
+a.MiniTOC2:hover,
+a.MiniTOC3:hover,
+a.MiniTOC4:hover,
+a.MiniTOC5:hover,
+a.MiniTOC6:hover,
+a.MiniTOC7:hover,
+a.MiniTOC8:hover,
+a.MiniTOC9:hover
+{
+	color: #4568a9;
+}
+
+.TableStyle-table2 tr:hover	/*Styles the hover effect of the table*/
+{
+	background-color: #e8ecf4;
+}
+
+.TableStyle-table21 tr:hover	/*Styles the hover effect of the table*/
+{
+	background-color: #e8ecf4;
+}
+
+h1
+{
+	color: #164293;
+	text-align: left;
+	margin-left: 0;
+	margin-top: 32px;
+	margin-right: 0;
+	margin-bottom: 32px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	line-height: 40px;
+	font-size: 32px;
+}
+
+h2
+{
+	margin-left: 0;
+	color: #000000;
+	margin-top: 32px;
+	margin-bottom: 16px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	margin-right: 0;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	text-align: left;
+	line-height: 36px;
+	font-size: 28px;
+}
+
+h3
+{
+	color: #000000;
+	margin-top: 16px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	margin-bottom: 16px;
+	text-align: left;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+li
+{
+	orphans: 2;
+	widows: 2;
+	margin-bottom: 6pt;
+	text-align: left;
+	list-style-position: outside;
+	text-indent: 0px;
+	list-style-image: url("../Graphics/Symbol/indent.svg");
+	list-style-type: none;
+	margin-left: 15mm;
+}
+
+MadCap|glossaryProxy
+{
+	margin-top: 0;
+	padding-left: 0;
+	border-top: none;
+}
+
+MadCap|indexProxy
+{
+	margin-top: 0;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+MadCap|tocProxy
+{
+	margin-top: 0;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+MadCap|xref
+{
+	mc-format: "{para}";
+	text-decoration: none;
+	color: #164293;
+}
+
+MadCap|xref:hover
+{
+	color: #4568a9;
+}
+
+p
+{
+	margin-top: 0;
+	margin-bottom: 12px;
+	text-align: left;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+}
+
+p.IndexHeading
+{
+	
+}
+
+h5
+{
+	color: #333;
+	margin-top: 16px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	margin-bottom: 16px;
+	text-align: left;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+h6
+{
+	color: #333;
+	font-style: italic;
+	margin-bottom: 16px;
+	margin-top: 16px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	text-align: left;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	font-size: 20px;
+	line-height: 28px;
+}
+
+p.copyright
+{
+	padding-bottom: 0mm;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-hidden: hidden;
+	line-height: 1.4;
+	font-size: 1.2rem;
+}
+
+/*Numberd equation subtitle*/
+
+p.equation_title
+{
+	margin-bottom: 10pt;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 15mm;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	mc-auto-number-class: bold;
+	mc-auto-number-format: "GE:Equ. {n+}: ";
+	line-height: 1.4;
+}
+
+p.table_title
+{
+	margin-bottom: 10pt;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 15mm;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	mc-auto-number-class: bold;
+	mc-auto-number-format: "GT:Tab. {n+}: ";
+	line-height: 1.4;
+}
+
+p.document
+{
+	mc-hidden: hidden;
+}
+
+p.how_to_title
+{
+	font-family: "Manrope SemiBold", Arial;
+	text-decoration: underline;
+	margin-top: 3pt;
+}
+
+p.product
+{
+	mc-hidden: hidden;
+}
+
+p.gloss_des
+{
+	mc-next-class: gloss_term;
+	mc-next-tag: p;
+	margin-left: 10mm;
+	line-height: 1.4;
+}
+
+h4
+{
+	color: #000000;
+	margin-top: 16px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	margin-bottom: 16px;
+	text-align: left;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	line-height: 28px;
+	font-size: 20px;
+}
+
+p.safety_heading
+{
+	mc-next-class: safety_text;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.table_head
+{
+	margin-bottom: 0;
+	margin-top: 6pt;
+	mc-next-class: table_head;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+p.table_default
+{
+	margin-bottom: 0;
+	margin-top: 6pt;
+	mc-next-class: table_default;
+	mc-next-tag: p;
+	font-family: "Manrope";
+	line-height: 1.4;
+	font-size: 1rem;
+}
+
+p.table_head_eng
+{
+	margin-bottom: 0;
+	mc-next-class: table_head;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	line-height: 1.1;
+}
+
+table
+{
+	
+}
+
+p.noteopen
+{
+	background-color: #f3e6f2;
+	border-left: solid 8px #89037a;
+	color: #000000;
+	padding: 8px 16px;
+	border-radius: 8px;
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+}
+
+MadCap|footnote
+{
+	margin-bottom: 5pt;
+	mc-footnote-comment-style: footnoteNumber;
+	mc-footnote-style: footnoteNumber;
+	mc-footnote-format: "{n}) ";
+	mc-footnote-comment-format: "{n}) ";
+	font-size: 0.8rem;
+}
+
+MadCap|footnoteBlock
+{
+	mc-footnote-style: footnoteNumber;
+	mc-footnote-comment-style: footnoteNumber;
+	margin-bottom: 3pt;
+	line-height: 1.4;
+}
+
+MadCap|footnotesBlock
+{
+	border-top-color: #000000;
+	border-top-width: 0.5pt;
+	border-top-length: 40%;
+	mc-footnote-comment-style: footnoteNumber;
+	mc-footnote-style: footnoteNumber;
+	line-height: 1.4;
+}
+
+p.note
+{
+	mc-next-class: note;
+	mc-next-tag: p;
+}
+
+p.TOC1
+{
+	
+}
+
+p.TOC2
+{
+	line-height: 12pt;
+	margin-left: 0;
+}
+
+p.TOC3
+{
+	line-height: 12pt;
+}
+
+p.TOC4
+{
+	line-height: 12pt;
+}
+
+p.TOC5
+{
+	line-height: 12pt;
+	margin-bottom: 0;
+}
+
+p.TOC6
+{
+	margin-bottom: 0;
+	line-height: 12pt;
+}
+
+MadCap|xref.Heading
+{
+	mc-format: "{para}";
+	color: #164293;
+}
+
+MadCap|xref.Heading:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.Heading:visited
+{
+	color: #164293;
+}
+
+ul
+{
+	text-align: left;
+	padding-left: 0;
+	margin: 0;
+}
+
+ol
+{
+	text-align: left;
+	margin: 0;
+	padding-left: 0;
+}
+
+li.howto_num
+{
+	list-style-position: outside;
+	list-style-type: decimal;
+	margin-left: 10mm;
+	list-style-image: none;
+}
+
+p.paragraph
+{
+	
+}
+
+li.list_num
+{
+	margin-left: 10mm;
+	list-style-type: upper-alpha;
+	list-style-position: outside;
+	background-image: none;
+	text-indent: 0px;
+	list-style-image: none;
+}
+
+p.safety_text
+{
+	mc-next-class: safety_text;
+	mc-next-tag: p;
+}
+
+MadCap|xref.Number_Only
+{
+	mc-format: "{paranumonly}";
+	color: #164293;
+}
+
+MadCap|xref.Number_Only:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.Number_Only:visited
+{
+	color: #164293;
+}
+
+MadCap|xref:visited
+{
+	color: #164293;
+}
+
+p.table_head_center
+{
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 6pt;
+	mc-next-class: table_head_center;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	line-height: 1.4;
+}
+
+p.table_default_center
+{
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 6pt;
+	mc-next-class: table_default_center;
+	mc-next-tag: p;
+	line-height: 1.4;
+}
+
+MadCap|xref.Number_Heading_Page
+{
+	color: #164293;
+}
+
+MadCap|xref.Number_Heading_Page:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.Number_Heading_Page:visited
+{
+	color: #164293;
+}
+
+MadCap|xref.Number_Page
+{
+	color: #164293;
+}
+
+MadCap|xref.Number_Page:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.Number_Page:visited
+{
+	color: #164293;
+}
+
+MadCap|xref.PageNum_Only
+{
+	color: #164293;
+}
+
+MadCap|xref.PageNum_Only:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.PageNum_Only:visited
+{
+	color: #164293;
+}
+
+a:link
+{
+	color: #164293;
+	text-decoration: none;
+}
+
+a:link
+{
+	color: #164293;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: #164293;
+	text-decoration: none;
+}
+
+a:visited
+{
+	text-decoration: none;
+}
+
+a:focus
+{
+	color: #164293;
+}
+
+a:hover
+{
+	color: #4568a9;
+}
+
+.dropdown-content a:hover
+{
+	background-color: #e8ecf4;
+	color: #5a646e;
+}
+
+a:hover
+{
+	color: #4568a9;
+	text-decoration: none;
+}
+
+a:active
+{
+	color: #000000;
+}
+
+MadCap|expandingBody
+{
+	font-style: italic;
+	color: #333;
+	margin-left: 3px;
+	border-left: solid 2px #164293;
+	background-color: #e8ecf4;
+	padding: 0px 5px 0px 2px;
+}
+
+MadCap|expandingHead
+{
+	color: #164293;
+}
+
+MadCap|expanding
+{
+	mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+	mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+}
+
+MadCap|toggler
+{
+	color: #164293;
+	mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+	mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+}
+
+MadCap|dropDownHotspot
+{
+	color: #164293;
+	font-family: "Manrope SemiBold", Arial;
+	font-size: 1.1rem;
+	line-height: 1.4;
+}
+
+MadCap|dropDownHead
+{
+	margin-bottom: 6pt;
+}
+
+MadCap|dropDownBody
+{
+	margin-bottom: 6pt;
+}
+
+MadCap|popupHead
+{
+	font-family: "Manrope", Arial;
+	color: #164293;
+}
+
+MadCap|popupBody
+{
+	font-family: "Manrope", Arial;
+	color: #5a646e;
+	border: solid 1px #000000;
+	background-color: #ffffff;
+	border-radius: 20px;
+	mc-hidden: hidden;
+}
+
+p.list_or
+{
+	font-style: italic;
+	margin-left: -4mm;
+}
+
+p.list2_or
+{
+	font-style: italic;
+	margin-left: -6mm;
+}
+
+li.table_list
+{
+	list-style-position: outside;
+	margin-left: 5mm;
+	list-style-type: none;
+	list-style-image: url("../Graphics/Symbol/indent.svg");
+}
+
+li.table_list2_num
+{
+	list-style-type: lower-alpha;
+	background-image: none;
+	text-indent: 0px;
+	list-style-position: outside;
+	list-style-image: none;
+	margin-left: 5mm;
+}
+
+p.safety_var
+{
+	font-size: 12pt;
+	text-transform: uppercase;
+	margin-left: 0;
+	padding-bottom: 2mm;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-next-class: safety_heading;
+	mc-next-tag: p;
+}
+
+div.GlossaryPageEntry
+{
+	margin-bottom: 6pt;
+}
+
+MadCap|glossaryTerm
+{
+	font-weight: normal;
+	text-decoration: none;
+	mc-closed-image: url("../Graphics/Symbol/icon_info_16px_blue.png");
+	color: #164293;
+	mc-open-image: url("../Graphics/Symbol/icon_info_16px_purple.png");
+	background-repeat: no-repeat;
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	
+}
+
+MadCap|listOfProxy
+{
+	border-top-style: none;
+}
+
+p.table_default_right
+{
+	text-align: right;
+	margin-bottom: 0;
+	margin-top: 6pt;
+	mc-next-class: table_default_right;
+	mc-next-tag: p;
+	line-height: 1.4;
+}
+
+p.safety_howto
+{
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm.svg");
+	background-size: 6mm auto;
+	background-repeat: no-repeat;
+	text-indent: 7mm;
+	background-position: left top;
+	margin-left: 0;
+	line-height: 14pt;
+	mc-next-class: howto;
+	mc-next-tag: p;
+}
+
+img.Icon
+{
+	vertical-align: baseline;
+}
+
+img.buttons
+{
+	height: 40px;
+	width: auto;
+}
+
+MadCap|miniTocProxy
+{
+	border-top-style: none;
+	text-align: left;
+	margin-bottom: 6pt;
+	text-indent: 0px;
+	vertical-align: 0px;
+	padding-left: 0pt;
+	padding-top: 0pt;
+	border-top-color: #000000;
+	mc-toc-depth: 2;
+	margin-top: 6pt;
+	display: block;
+}
+
+p.MiniTOC1
+{
+	color: #164293;
+	display: block;
+	mc-pagenum-display: none;
+	mc-leader-format: "none";
+	mc-leader-offset: 10pt;
+	list-style-type: none;
+	margin-left: 5mm;
+	font-family: "Manrope SemiBold", "Arial", "Arial Rounded MT Bold";
+	font-weight: normal;
+}
+
+p.MiniTOC1:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC1:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC2
+{
+	color: #164293;
+	list-style-position: inside;
+	mc-leader-format: "none";
+	mc-pagenum-display: none;
+	margin-bottom: 6pt;
+	list-style-type: none;
+	display: block;
+	margin-left: 10mm;
+}
+
+p.MiniTOC2:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC2:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC3
+{
+	text-align: left;
+	mc-pagenum-display: none;
+	list-style-position: inside;
+	mc-leader-format: "none";
+	color: #164293;
+	margin-bottom: 6pt;
+	list-style-type: none;
+	display: block;
+	margin-left: 15mm;
+}
+
+p.MiniTOC3:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC3:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC4
+{
+	list-style-position: inside;
+	margin-bottom: 6pt;
+	mc-leader-format: "none";
+	color: #164293;
+	mc-pagenum-display: none;
+	list-style-type: none;
+	display: block;
+	margin-left: 20mm;
+}
+
+p.MiniTOC4:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC4:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC5
+{
+	list-style-position: inside;
+	color: #164293;
+	mc-leader-format: "none";
+	mc-pagenum-display: none;
+	list-style-type: none;
+	display: block;
+	margin-left: 25mm;
+}
+
+p.MiniTOC5:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC5:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC6
+{
+	list-style-position: inside;
+	color: #164293;
+	mc-leader-format: "none";
+	mc-pagenum-display: none;
+	list-style-type: none;
+	display: block;
+	margin-left: 30mm;
+}
+
+p.MiniTOC6:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC6:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC7
+{
+	list-style-position: inside;
+	color: #164293;
+	mc-leader-format: "none";
+	mc-pagenum-display: none;
+	list-style-type: none;
+	display: block;
+	margin-left: 35mm;
+}
+
+p.MiniTOC7:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC7:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC8
+{
+	list-style-position: inside;
+	color: #164293;
+	mc-leader-format: "none";
+	mc-pagenum-display: none;
+	list-style-type: none;
+	display: block;
+	margin-left: 40mm;
+}
+
+p.MiniTOC8:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC8:visited
+{
+	color: #164293;
+}
+
+p.MiniTOC9
+{
+	list-style-position: inside;
+	color: #164293;
+	mc-leader-format: "none";
+	mc-pagenum-display: none;
+	margin-bottom: 6pt;
+	list-style-type: none;
+	display: block;
+	margin-left: 45mm;
+}
+
+p.MiniTOC9:hover
+{
+	color: #4568a9;
+}
+
+p.MiniTOC9:visited
+{
+	color: #164293;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom-width: 0;
+	mc-breadcrumbs-count: 10;
+	mc-breadcrumbs-prefix: "[%=etas.Product%] >";
+	font-size: 14px;
+	line-height: 22px;
+	font-family: "Manrope SemiBold";
+	padding-left: 24px;
+}
+
+p.equation_titleAVZ
+{
+	line-height: 1.2;
+	mc-hidden: hidden;
+}
+
+p.table_titleAVZ
+{
+	mc-hidden: hidden;
+}
+
+p.code2
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 6mm;
+	mc-next-tag: p;
+	mc-next-class: code2;
+}
+
+p.code3
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 9mm;
+	mc-next-tag: p;
+	mc-next-class: code3;
+}
+
+p.code4
+{
+	margin-left: 12mm;
+	font-family: "Fira Code", "Courier New";
+	mc-next-tag: p;
+	mc-next-class: code4;
+}
+
+p.code5
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 15mm;
+	mc-next-tag: p;
+	mc-next-class: code5;
+}
+
+p.code6
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 18mm;
+	mc-next-tag: p;
+	mc-next-class: code6;
+}
+
+p.code7
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 21mm;
+	mc-next-tag: p;
+	mc-next-class: code7;
+}
+
+p.code8
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 24mm;
+	mc-next-tag: p;
+	mc-next-class: code8;
+}
+
+p.code9
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 27mm;
+	mc-next-tag: p;
+	mc-next-class: code9;
+}
+
+p.empty
+{
+	margin-bottom: 2pt;
+	font-size: 5pt;
+	line-height: 6pt;
+	mc-hidden: hidden;
+}
+
+span.code_red_ff0000
+{
+	font-family: "Fira Code", "Courier New";
+	color: #ff0000;
+}
+
+span.code_blue_000080
+{
+	font-family: "Fira Code", "Courier New";
+	color: #000080;
+}
+
+ol.table
+{
+	margin-top: 6pt;
+	list-style-type: decimal;
+}
+
+MadCap|miniTocProxy.miniToc_list
+{
+	
+}
+
+ol p.figure_title
+{
+	
+}
+
+ol p.table_title
+{
+	
+}
+
+ol p.equation_title
+{
+	
+}
+
+ul p.figure_title
+{
+	
+}
+
+ul p.table_title
+{
+	
+}
+
+ul p.equation_title
+{
+	
+}
+
+img.howto2
+{
+	margin-left: 0;
+	max-height: auto;
+	mc-hidden: hidden;
+}
+
+li.howto_result
+{
+	list-style-position: outside;
+	list-style-type: none;
+	list-style-image: url("../Graphics/Symbol/ArrowFatRight.svg");
+	margin-left: 15mm;
+}
+
+acronym
+{
+	mc-hidden: hidden;
+}
+
+big
+{
+	mc-hidden: hidden;
+}
+
+kbd
+{
+	mc-hidden: hidden;
+}
+
+cite
+{
+	mc-hidden: hidden;
+}
+
+code
+{
+	mc-hidden: hidden;
+	font-family: monospace;
+}
+
+tt
+{
+	mc-hidden: hidden;
+}
+
+q
+{
+	mc-hidden: hidden;
+}
+
+samp
+{
+	mc-hidden: hidden;
+}
+
+del
+{
+	mc-hidden: hidden;
+}
+
+MadCap|helpControlMenuItem
+{
+	mc-hidden: hidden;
+}
+
+i
+{
+	mc-hidden: hidden;
+}
+
+MadCap|slideThumbnail
+{
+	mc-hidden: hidden;
+	border: solid 1px #dee0e2;
+}
+
+b
+{
+	mc-hidden: hidden;
+	font-family: "Manrope ExtraBold";
+	font-weight: normal;
+}
+
+abbr
+{
+	mc-hidden: hidden;
+}
+
+ins
+{
+	mc-hidden: hidden;
+}
+
+small
+{
+	mc-hidden: hidden;
+	font-size: 0.8 rem;
+}
+
+var
+{
+	mc-hidden: hidden;
+}
+
+sub
+{
+	mc-hidden: hidden;
+}
+
+sup
+{
+	mc-hidden: hidden;
+}
+
+label
+{
+	mc-hidden: hidden;
+}
+
+span.state
+{
+	mc-hidden: hidden;
+}
+
+img
+{
+	max-width: 100%;
+}
+
+MadCap|toggler:focus
+{
+	mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+	mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+	color: #4568a9;
+}
+
+MadCap|toggler:hover
+{
+	color: #4568a9;
+	mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+	mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+}
+
+MadCap|dropDown:hover
+{
+	mc-open-image: url('../Graphics/Symbol/CaretDown_blue.svg');
+	mc-closed-image: url('../Graphics/Symbol/CaretRight_blue.svg');
+}
+
+MadCap|dropDown:focus
+{
+	mc-closed-image: url('../Graphics/Symbol/CaretRight_blue.svg');
+	mc-open-image: url('../Graphics/Symbol/CaretDown_blue.svg');
+}
+
+MadCap|dropDown
+{
+	mc-closed-image: url('../Graphics/Symbol/CaretRight.svg');
+	mc-open-image: url('../Graphics/Symbol/CaretDown_blue.svg');
+}
+
+MadCap|dropDownHead:hover
+{
+	mc-closed-image: url('../Graphics/Symbol/CaretRight_blue.svg');
+	mc-open-image: url('../Graphics/Symbol/CaretDown_blue.svg');
+	color: #164293;
+}
+
+MadCap|dropDownHead:focus
+{
+	mc-closed-image: url('../Graphics/Symbol/CaretRight_blue.svg');
+	mc-open-image: url('../Graphics/Symbol/CaretDown_blue.svg');
+	color: #164293;
+}
+
+MadCap|dropDownHotspot:focus
+{
+	color: #164293;
+	mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+	mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+}
+
+MadCap|dropDownHotspot:hover
+{
+	color: #164293;
+	mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+	mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+}
+
+MadCap|expandingHead:focus
+{
+	color: #164293;
+}
+
+MadCap|expandingHead:hover
+{
+	color: #4568a9;
+}
+
+MadCap|popup:focus
+{
+	color: #164293;
+}
+
+MadCap|popup:hover
+{
+	color: #4568a9;
+}
+
+.codeSnippet
+{
+	border: solid 1px #a7a7a7;
+	border-radius: 8px;
+	padding: 8px 16px;
+	margin: 16px 8px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.codeSnippetCaption
+{
+	text-decoration: underline;
+	font-family: "Manrope SemiBold";
+	font-size: 16px;
+}
+
+.codeSnippetCopyButton
+{
+	border: solid 1px #164293;
+	border-radius: 20px;
+	color: #164293;
+	font-family: "Manrope SemiBold";
+	padding: 8px 16px;
+	line-height: 24px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.codeSnippetCopyButton:hover
+{
+	color: #4568a9;
+	border: solid 1px #4568a9;
+}
+
+.codeSnippetBody
+{
+	mc-code-border: solid 1px #a7a7a7;
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-family: "Fira Code", "Courier New";
+}
+
+MadCap|glossaryTerm:hover
+{
+	color: #4568a9;
+	background-repeat: no-repeat;
+}
+
+MadCap|glossaryTerm:focus
+{
+	color: #164293;
+}
+
+MadCap|glossaryTerm.Popup
+{
+	border-radius: 20px;
+}
+
+address
+{
+	mc-hidden: hidden;
+}
+
+fieldset
+{
+	mc-hidden: hidden;
+}
+
+pre
+{
+	mc-hidden: hidden;
+}
+
+MadCap|xref:focus
+{
+	color: #164293;
+}
+
+MadCap|xref:hover
+{
+	color: #4568a9;
+}
+
+MadCap|slideThumbnail:hover
+{
+	border: solid 1px #4568a9;
+}
+
+p.figure_titleAVZ
+{
+	line-height: 1.2;
+	mc-hidden: hidden;
+}
+
+span.SearchHighlight
+{
+	background: rgb(147, 115, 177, 0.3) !important;
+}
+
+span.SearchHighlight2
+{
+	background: rgb(56, 177, 186, 0.3) !important;
+}
+
+span.SearchHighlight3
+{
+	background: rgb(0, 123, 194, 0.3) !important;
+}
+
+span.SearchHighlight4
+{
+	background: rgb(112, 203, 243, 0.3) !important;
+}
+
+strong
+{
+	mc-hidden: hidden;
+}
+
+@media print
+{
+	/*Next two style all paragraphes in lists*/
+
+	ol > li > p
+	{
+		margin-left: 0mm;
+	}
+
+	ul > li > p
+	{
+		margin-left: 0mm;
+	}
+
+	body
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		font-family: "Manrope";
+		font-size: 10pt;
+		line-height: 1.4;
+	}
+
+	div.GlossaryPageDefinition
+	{
+		margin-bottom: 4pt;
+		margin-left: 30mm;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		mc-hyphenate: always;
+		font-family: "Manrope";
+		font-size: 10pt;
+	}
+
+	div.GlossaryPageHeading
+	{
+		margin-left: 20mm;
+		margin-bottom: 4pt;
+		font-size: 12pt;
+	}
+
+	div.GlossaryPageTerm
+	{
+		font-size: 10pt;
+		margin-bottom: 4pt;
+		margin-left: 20mm;
+		font-family: "Manrope ExtraBold";
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	/*Alignes the glossary content with the heading*/
+
+	.GlossaryProxy
+	{
+		margin-left: -20mm;
+	}
+
+	h1
+	{
+		margin-right: 0;
+		margin-top: 0;
+		page-break-before: always;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		mc-auto-number-position: outside-head;
+		mc-auto-number-offset: 20mm;
+		margin-bottom: 3mm;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		mc-auto-number-format: "CH:{chapnum} ";
+		margin-left: 20mm;
+		font-family: "Manrope SemiBold";
+		font-size: 14pt;
+	}
+
+	h2
+	{
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		mc-auto-number-format: "CH:{chapnum}.{n+} ";
+		mc-auto-number-offset: 20mm;
+		mc-auto-number-position: outside-head;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		mc-hyphenate: always;
+		border-bottom-width: 0.5pt;
+		orphans: 3;
+		widows: 3;
+		margin-bottom: 3pt;
+		font-family: "Manrope SemiBold";
+		margin-left: 20mm;
+		font-size: 12pt;
+	}
+
+	h3
+	{
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		mc-auto-number-format: "CH:{chapnum}.{n}.{n+} ";
+		mc-auto-number-offset: 20mm;
+		mc-auto-number-position: outside-head;
+		margin-bottom: 3pt;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 20mm;
+		font-family: "Manrope SemiBold";
+		font-size: 12pt;
+	}
+
+	h4
+	{
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		mc-auto-number-format: "CH:{chapnum}.{n}.{n}.{n+} ";
+		mc-auto-number-offset: 20mm;
+		mc-auto-number-position: outside-head;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-bottom: 3pt;
+		margin-left: 20mm;
+		font-family: "Manrope SemiBold";
+		font-size: 12pt;
+	}
+
+	MadCap|glossaryProxy
+	{
+		border-top: none;
+		padding-top: 0pt;
+	}
+
+	MadCap|indexProxy
+	{
+		border-top: none;
+	}
+
+	MadCap|tocProxy
+	{
+		border-top: none;
+	}
+
+	p
+	{
+		margin-bottom: 4pt;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 20mm;
+		orphans: 3;
+		widows: 3;
+	}
+
+	p.empty
+	{
+		margin-bottom: 2pt;
+		font-size: 5pt;
+	}
+
+	p.IndexHeading
+	{
+		text-align: left;
+		font-size: 12pt;
+		line-height: 14pt;
+		page-break-after: avoid;
+		margin-bottom: 0;
+		font-family: "Manrope SemiBold";
+		font-weight: normal;
+		padding-top: 6pt;
+		margin-top: 6pt;
+	}
+
+	p.TOC1
+	{
+		margin-top: 10pt;
+		mc-leader-format: ".";
+		mc-auto-number-offset: 12.5mm;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		mc-auto-number-class: autoNumTOC;
+		line-height: 12pt;
+		margin-bottom: 0;
+		mc-auto-number-position: outside-head;
+		margin-left: 0 mm;
+		font-family: "Manrope SemiBold";
+		font-weight: normal;
+	}
+
+	p.TOC2
+	{
+		margin-bottom: 0;
+		margin-top: 6pt;
+		mc-auto-number-offset: 12.5mm;
+		mc-auto-number-position: outside-head;
+		mc-auto-number-class: autoNumTOC;
+	}
+
+	h5
+	{
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		margin-bottom: 3pt;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 20mm;
+		mc-heading-level: 0;
+		font-family: "Manrope SemiBold";
+		font-size: 12pt;
+	}
+
+	h6
+	{
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		margin-bottom: 3pt;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 20mm;
+		mc-heading-level: 0;
+		font-family: "Manrope SemiBold";
+		font-size: 12pt;
+	}
+
+	p.copyright
+	{
+		page-break-after: avoid;
+		font-size: 12pt;
+	}
+
+	p.equation_title
+	{
+		page-break-before: avoid;
+		page-break-inside: avoid;
+		margin-top: 3pt;
+		mc-auto-number-offset: 18mm;
+		margin-bottom: 8pt;
+		margin-left: 20mm;
+		mc-auto-number-format: "CE:Equ. {chapnum}-{n+}: ";
+		line-height: 1.4;
+	}
+
+	p.figure_title
+	{
+		margin-top: 3pt;
+		page-break-inside: avoid;
+		page-break-before: avoid;
+		margin-bottom: 8pt;
+		margin-left: 20mm;
+		mc-auto-number-offset: 18mm;
+		mc-auto-number-format: "CF:Fig. {chapnum}-{n+}: ";
+	}
+
+	p.table_title
+	{
+		page-break-before: avoid;
+		page-break-inside: avoid;
+		mc-auto-number-offset: 18mm;
+		margin-bottom: 8pt;
+		margin-left: 20mm;
+		mc-auto-number-format: "CT:Tab. {chapnum}-{n+}: ";
+		margin-top: -6pt;
+	}
+
+	h1.heading_list
+	{
+		mc-auto-number-position: none;
+		margin-left: 0mm;
+		font-size: 14pt;
+	}
+
+	p.document
+	{
+		margin-left: 0;
+		font-size: 25pt;
+		margin-top: 0pt;
+		margin-bottom: 0pt;
+		color: #ffffff;
+		font-family: "Manrope SemiBold";
+		line-height: 1.4;
+	}
+
+	p.gloss_term
+	{
+		page-break-after: avoid;
+		margin-top: 12pt;
+		margin-bottom: 3pt;
+	}
+
+	p.gloss_des
+	{
+		page-break-before: avoid;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 25mm;
+	}
+
+	p.gui_title	/*title for gui explenations*/
+	{
+		page-break-after: avoid;
+		font-size: 12pt;
+	}
+
+	p.how_to_title
+	{
+		page-break-after: avoid;
+		font-family: Manrope;
+	}
+
+	p.product
+	{
+		margin-left: 0;
+		color: #164293;
+		font-family: "Manrope ExtraBold";
+		line-height: 31pt;
+		margin-bottom: 0pt;
+		font-size: 25pt;
+	}
+
+	p.safety_heading
+	{
+		margin-left: 0;
+		font-family: "Manrope ExtraBold";
+	}
+
+	p.note
+	{
+		margin-left: 0;
+	}
+
+	p.safety_text
+	{
+		margin-left: 0;
+	}
+
+	p.table_head
+	{
+		margin-left: 0;
+		margin-top: 0;
+		font-size: 10pt;
+	}
+
+	p.table_default
+	{
+		margin-left: 0;
+		margin-top: 3pt;
+		font-size: 10pt;
+	}
+
+	p.table_default_eng
+	{
+		margin-left: 0;
+	}
+
+	p.table_head_eng
+	{
+		margin-left: 0;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	p.header
+	{
+		text-align: right;
+		line-height: 12pt;
+		margin-bottom: 0pt;
+		margin-left: 0mm;
+		color: #8b9299;
+	}
+
+	p.terminology
+	{
+		margin-top: 4pt;
+		text-indent: -40mm;
+		margin-left: 60mm;
+	}
+
+	p.code
+	{
+		text-align: left;
+	}
+
+	MadCap|footnote
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate: always;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		mc-footnote-position: page;
+		margin-bottom: 3pt;
+		mc-footnote-number: page;
+		margin-left: 20mm;
+		font-size: 9.5pt;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-footnote-format: "{n}) ";
+		mc-footnote-comment-format: "{n})    ";
+	}
+
+	MadCap|footnoteBlock
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 25mm;
+		mc-hyphenate: always;
+		text-indent: -5mm;
+		font-size: 9.5pt;
+		line-height: 1.4;
+	}
+
+	span.footnoteNumber
+	{
+		font-size: 8pt;
+	}
+
+	p.Safety_caution
+	{
+		margin-left: 0mm;
+		padding-bottom: 0;
+		line-height: 10mm;
+		font-family: "Manrope ExtraBold";
+		margin-bottom: 5pt;
+	}
+
+	p.safety_danger
+	{
+		padding-bottom: 1pt;
+		line-height: 10mm;
+		font-family: "Manrope ExtraBold";
+		margin-bottom: 5pt;
+	}
+
+	p.Index1
+	{
+		margin-bottom: 0;
+		mc-multiline-indent: 12.7mm;
+		mc-leader-format: ".";
+		mc-leader-offset: 5pt;
+		mc-reference-separator: ",";
+		margin-left: 0;
+	}
+
+	p.TOC3
+	{
+		margin-left: 12.5mm;
+		margin-bottom: 0;
+		mc-auto-number-offset: 15mm;
+		vertical-align: text-top;
+		mc-auto-number-position: outside-head;
+		mc-auto-number-class: autoNumTOC;
+		margin-top: 3pt;
+	}
+
+	p.TOC4
+	{
+		mc-auto-number-offset: 17.5mm;
+		margin-bottom: 0;
+		mc-auto-number-position: outside-head;
+		mc-auto-number-class: autoNumTOC;
+		margin-left: 27.5mm;
+		margin-top: 2pt;
+	}
+
+	span.autoNumTOC
+	{
+		vertical-align: top;
+		margin-top: 0;
+	}
+
+	p.TOC5
+	{
+		margin-left: 45mm;
+		margin-top: 2pt;
+	}
+
+	p.TOC6
+	{
+		margin-left: 50mm;
+		margin-top: 2pt;
+	}
+
+	p.Index2
+	{
+		margin-bottom: 0;
+		margin-left: 6.3mm;
+		page-break-before: avoid;
+		orphans: 2;
+		widows: 2;
+		mc-leader-format: ".";
+		mc-leader-offset: 5pt;
+		mc-multiline-indent: 12.7mm;
+		mc-reference-separator: ",";
+	}
+
+	span.italic
+	{
+		mc-italic-correction: 1pt;
+	}
+
+	MadCap|xref
+	{
+		mc-format: "{quote}{paratext}{quote} {pageref}";
+		color: #164293;
+	}
+
+	MadCap|xref.Heading
+	{
+		mc-format: "{quote}{paratext}{quote} {pageref}";
+	}
+
+	li
+	{
+		margin-bottom: 4pt;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		mc-hyphenate: always;
+		margin-left: 30mm;
+	}
+
+	li.list2
+	{
+		list-style-position: outside;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	li.list
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 30mm;
+		list-style-image: url("../Graphics/Symbol/indent.svg");
+	}
+
+	li.howto_num
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 30mm;
+	}
+
+	li.howto
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 30mm;
+	}
+
+	p.paragraph
+	{
+		
+	}
+
+	p.list
+	{
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	li.list_num
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 30mm;
+	}
+
+	MadCap|xref.Number_Page
+	{
+		mc-format: "{paranum} {pageref}";
+	}
+
+	MadCap|xref.Number_Heading_Page
+	{
+		mc-format: "{paranum} {quote}{paratext}{quote} {pageref}";
+		color: #164293;
+	}
+
+	MadCap|xref.Number_Only
+	{
+		color: #164293;
+	}
+
+	MadCap|xref.PageNum
+	{
+		mc-format: "{pageref}";
+	}
+
+	MadCap|xref.PageNum_Only
+	{
+		mc-format: "{page}";
+	}
+
+	MadCap|xref:visited
+	{
+		color: inherit;
+	}
+
+	p.table_head_center
+	{
+		margin-left: 0;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	p.table_default_center
+	{
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+	span.link
+	{
+		text-decoration: underline;
+	}
+
+	a
+	{
+		
+	}
+
+	a:link
+	{
+		color: #164293;
+	}
+
+	a:hover
+	{
+		color: #4568a9;
+	}
+
+	a:focus
+	{
+		
+	}
+
+	a:active
+	{
+		
+	}
+
+	a:visited
+	{
+		color: #164293;
+	}
+
+	MadCap|dropDownHead
+	{
+		margin-left: 20mm;
+		margin-bottom: 4pt;
+	}
+
+	MadCap|dropDownHotspot
+	{
+		color: #000000;
+	}
+
+	MadCap|expandingHead.code_bold
+	{
+		font-family: "Fira Code SemiBold", "Courier New";
+		font-weight: 600;
+	}
+
+	MadCap|popupHead
+	{
+		color: #000000;
+	}
+
+	img.safetyVar
+	{
+		margin-bottom: -1pt;
+	}
+
+	p.table_default_right
+	{
+		margin-top: 0;
+		margin-left: 0;
+	}
+
+	p.figure_titleAVZ
+	{
+		margin-bottom: 6pt;
+		mc-leader-align: right;
+		mc-leader-format: ".";
+		margin-left: 0;
+		mc-multiline-indent: 18mm;
+		line-height: 1.2;
+		mc-hidden: hidden;
+	}
+
+	MadCap|listOfProxy
+	{
+		margin-top: 0;
+		padding-left: 0;
+		padding-top: 0;
+	}
+
+	p.equation_titleAVZ
+	{
+		margin-bottom: 6pt;
+		mc-leader-align: right;
+		margin-left: 0;
+		mc-multiline-indent: 18mm;
+		mc-leader-format: ".";
+		line-height: 1.4;
+	}
+
+	p.table_titleAVZ
+	{
+		margin-bottom: 6pt;
+		mc-leader-align: right;
+		mc-leader-format: ".";
+		margin-left: 0;
+		mc-multiline-indent: 18mm;
+	}
+
+	p.safety_warning
+	{
+		padding-bottom: 1pt;
+		line-height: 10mm;
+		font-family: "Manrope ExtraBold";
+		margin-bottom: 5pt;
+		mc-auto-number-format: "{family Manrope ExtraBold}WARNING{/family}";
+	}
+
+	p.note_Header
+	{
+		line-height: 9mm;
+		font-family: "Manrope ExtraBold";
+	}
+
+	img.left
+	{
+		max-height: auto;
+		max-width: 130mm;
+	}
+
+	img.howto	/*for images in an instruction*/
+	{
+		max-height: auto;
+		max-width: 110mm;
+	}
+
+	img.Icon	/*for small images in line with the text*/
+	{
+		max-width: auto;
+		max-height: 6mm;
+		vertical-align: text-bottom;
+		/*margin-bottom: -2pt;*/
+	}
+
+	img.list
+	{
+		max-height: auto;
+		max-width: 115mm;
+	}
+
+	img.list2
+	{
+		max-height: auto;
+		max-width: 110mm;
+	}
+
+	MadCap|miniTocProxy
+	{
+		mc-toc-depth: 2;
+		margin-left: 25mm;
+		margin-top: 4pt;
+	}
+
+	MadCap|glossaryTerm
+	{
+		color: #000000;
+		text-decoration: none;
+	}
+
+	p.MiniTOC1
+	{
+		text-decoration: underline;
+		padding-left: 0;
+		padding-top: 0;
+		list-style-position: inside;
+		page-break-inside: avoid;
+		display: block;
+		list-style-type: none;
+		margin-left: 0mm;
+	}
+
+	p.MiniTOC2
+	{
+		margin-left: 5mm;
+		text-decoration: underline;
+		padding-left: 0;
+		list-style-position: inside;
+		display: block;
+		list-style-type: none;
+	}
+
+	p.MiniTOC3
+	{
+		margin-bottom: 4pt;
+		margin-left: 10mm;
+		text-decoration: underline;
+		display: block;
+	}
+
+	p.MiniTOC4
+	{
+		margin-bottom: 4pt;
+		margin-left: 15mm;
+		color: #000000;
+		text-decoration: underline;
+		display: block;
+	}
+
+	p.MiniTOC5
+	{
+		margin-bottom: 4pt;
+		margin-left: 20mm;
+		color: #000000;
+		text-decoration: underline;
+		display: block;
+	}
+
+	p.MiniTOC6
+	{
+		margin-bottom: 4pt;
+		margin-left: 25mm;
+		color: #000000;
+		text-decoration: underline;
+		display: block;
+	}
+
+	p.MiniTOC7
+	{
+		margin-bottom: 4pt;
+		margin-left: 30mm;
+		color: #000000;
+		text-decoration: underline;
+		display: block;
+	}
+
+	p.MiniTOC8
+	{
+		margin-bottom: 4pt;
+		margin-left: 35mm;
+		color: #000000;
+		text-decoration: underline;
+		display: block;
+	}
+
+	p.MiniTOC9
+	{
+		margin-bottom: 4pt;
+		margin-left: 40mm;
+		color: #000000;
+		text-decoration: underline;
+		display: block;
+	}
+
+	MadCap|toggler
+	{
+		color: #000000;
+		page-break-inside: avoid;
+	}
+
+	MadCap|expandingHead
+	{
+		color: #000000;
+	}
+
+	h1.heading_toc
+	{
+		mc-auto-number-position: none;
+		mc-heading-level: 0;
+		margin-left: 0mm;
+		font-size: 14pt;
+	}
+
+	img.wide
+	{
+		margin-left: -20mm;
+		max-height: auto;
+		max-width: 150mm;
+	}
+
+	div.no_break
+	{
+		page-break-inside: avoid;
+	}
+
+	span.bold
+	{
+		font-family: "Manrope ExtraBold";
+	}
+
+	p.safety_notice
+	{
+		font-family: "Manrope ExtraBold";
+	}
+
+	p.safety_attention
+	{
+		font-family: "Manrope ExtraBold";
+	}
+
+	p.safety_var
+	{
+		font-family: "Manrope ExtraBold";
+	}
+
+	p.see
+	{
+		page-break-after: avoid;
+	}
+
+	p.see_also
+	{
+		page-break-after: avoid;
+	}
+
+	li.table_list
+	{
+		margin-bottom: 2 pt;
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	li.table_list_num
+	{
+		margin-bottom: 2 pt;
+		orphans: 3;
+		widows: 3;
+	}
+
+	li.table_list2
+	{
+		margin-bottom: 2 pt;
+		orphans: 3;
+		widows: 3;
+		margin-left: 5mm;
+	}
+
+	li.table_list2_num
+	{
+		margin-bottom: 2 pt;
+		orphans: 3;
+		widows: 3;
+		margin-left: 5mm;
+	}
+
+	div.GlossaryPageEntry
+	{
+		margin-bottom: 6pt;
+	}
+
+	MadCap|popupBody
+	{
+		mc-hyphenate: always;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	p.code1
+	{
+		margin-left: 23mm;
+	}
+
+	p.code2
+	{
+		margin-left: 26mm;
+	}
+
+	p.code3
+	{
+		margin-left: 29mm;
+	}
+
+	p.code4
+	{
+		margin-left: 32mm;
+	}
+
+	p.code5
+	{
+		margin-left: 35mm;
+	}
+
+	p.code6
+	{
+		margin-left: 38mm;
+	}
+
+	p.code7
+	{
+		margin-left: 41mm;
+	}
+
+	p.code8
+	{
+		margin-left: 44mm;
+	}
+
+	p.code9
+	{
+		margin-left: 47mm;
+	}
+
+	p.howto
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	span.code
+	{
+		
+	}
+
+	span.code_red_ff0000
+	{
+		
+	}
+
+	span.code_blue_0000ff
+	{
+		font-family: "Fira Code", "Courier New";
+	}
+
+	span.code_blue_000080
+	{
+		font-family: "Fira Code", "Courier New";
+	}
+
+	ul.table
+	{
+		margin-top: 4pt;
+	}
+
+	ol.table
+	{
+		margin-top: 4pt;
+	}
+
+	p.Index3
+	{
+		margin-left: 12.7mm;
+		mc-multiline-indent: 25.4mm;
+		mc-leader-offset: 5pt;
+		mc-leader-format: ".";
+		margin-bottom: 0pt;
+	}
+
+	MadCap|dropDown.table
+	{
+		margin-top: 4pt;
+	}
+
+	MadCap|dropDown
+	{
+		
+	}
+
+	MadCap|dropDownHead.table
+	{
+		margin-left: 0mm;
+	}
+
+	p.table_code
+	{
+		margin-top: 4pt;
+	}
+
+	ol p.figure_title
+	{
+		margin-left: 18mm;
+	}
+
+	ol p.table_title
+	{
+		margin-left: 18mm;
+	}
+
+	ol p.equation_title
+	{
+		margin-left: 18mm;
+	}
+
+	ul p.figure_title
+	{
+		margin-left: 18mm;
+	}
+
+	ul p.table_title
+	{
+		margin-left: 18mm;
+	}
+
+	ul p.equation_title
+	{
+		margin-left: 18mm;
+	}
+
+	img.howto2
+	{
+		max-height: auto;
+		max-width: 115mm;
+	}
+
+	MadCap|xref.PageNum_static
+	{
+		mc-format: "page {page}";
+	}
+
+	li.howto_result
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 30mm;
+	}
+
+	li.howto2
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+		margin-left: 5mm;
+	}
+
+	li.howto2_num
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	li.list2_num
+	{
+		orphans: 3;
+		widows: 3;
+		mc-hyphenate-maximum-adjacent-line-count: 2;
+		mc-hyphenate-shortest-prefix: 3;
+		mc-hyphenate-shortest-suffix: 3;
+		mc-hyphenate-shortest-word: 6;
+	}
+
+	ol
+	{
+		orphans: 3;
+		widows: 3;
+	}
+
+	ul
+	{
+		orphans: 3;
+		widows: 3;
+	}
+
+	li.howto img.wide
+	{
+		margin-left: -40mm;
+	}
+
+	li.howto_num img.wide
+	{
+		margin-left: -40mm;
+	}
+
+	li.howto2 img.wide
+	{
+		margin-left: -45mm;
+	}
+
+	li.howto2_num img.wide
+	{
+		margin-left: -45mm;
+	}
+
+	li.list img.wide
+	{
+		margin-left: -30mm;
+	}
+
+	li.list_num img.wide
+	{
+		margin-left: -30mm;
+	}
+
+	li.list2 img.wide
+	{
+		margin-left: -35mm;
+	}
+
+	li.list2_num img.wide
+	{
+		margin-left: -35mm;
+	}
+
+	p.header_l
+	{
+		color: #8b9299;
+		line-height: 12pt;
+		margin-bottom: 0pt;
+		margin-left: 0mm;
+	}
+
+	p.h5_like
+	{
+		margin-bottom: 4pt;
+		margin-left: 20mm;
+		page-break-inside: avoid;
+		page-break-after: avoid;
+		font-size: 12pt;
+	}
+
+	p.product_sub
+	{
+		color: #164293;
+		font-family: "Manrope SemiBold";
+		font-size: 25pt;
+		line-height: 31pt;
+		margin-left: 0mm;
+		margin-bottom: 0pt;
+		margin-top: 10pt;
+	}
+
+	MadCap|toggler:focus
+	{
+		color: #000000;
+	}
+
+	MadCap|toggler:hover
+	{
+		color: #000000;
+	}
+
+	img.thumbnail
+	{
+		max-height: auto;
+		max-width: 130mm;
+	}
+
+	MadCap|codeSnippet
+	{
+		margin-left: 20mm;
+	}
+
+	div.example
+	{
+		text-align: 0;
+		mc-auto-number-position: outside-head;
+		mc-auto-number-offset: -20mm;
+		padding-left: -17mm;
+		margin-left: 20mm;
+	}
+
+	p.noteopen
+	{
+		border-left: solid 8px #89037a;
+	}
+
+	p.safety_howto
+	{
+		line-height: 14pt;
+		background-size: 5.5mm auto;
+	}
+
+	MadCap|toggler.example
+	{
+		color: #164293;
+	}
+
+	img.buttons
+	{
+		height: 30px;
+		width: auto;
+	}
+}
+
+p.code
+{
+	font-family: "Fira Code", "Courier New";
+	mc-next-tag: p;
+	mc-next-class: code;
+	line-height: 1.4;
+}
+
+p.figure_title
+{
+	margin-bottom: 10pt;
+	mc-auto-number-offset: 15mm;
+	mc-auto-number-position: inside-head;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	mc-auto-number-class: bold;
+	mc-auto-number-format: "GF:Fig. {n+}: ";
+	line-height: 1.4;
+}
+
+/*Heading for generated lists in PDF documents, except glossary and table of contents*/
+
+h1.heading_list
+{
+	margin-bottom: 10pt;
+	mc-hidden: hidden;
+	line-height: 1.4;
+	font-size: 1.5rem;
+}
+
+p.gloss_term
+{
+	mc-next-tag: p;
+	mc-next-class: gloss_des;
+	margin-top: 6pt;
+	line-height: 1.4;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.table_default_eng
+{
+	margin-bottom: 0;
+	margin-top: 0;
+	mc-next-tag: p;
+	mc-next-class: table_default;
+	line-height: 1.1;
+}
+
+p.header
+{
+	mc-toc-depth: 6;
+	text-align: right;
+	mc-hidden: hidden;
+}
+
+p.terminology
+{
+	text-indent: -40mm;
+	margin-left: 40mm;
+	mc-hidden: hidden;
+}
+
+span.footnoteNumber
+{
+	color: #000000;
+	font-size: inherit;
+	vertical-align: super;
+	mc-hidden: hidden;
+}
+
+p.note_Header
+{
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	margin-left: 0;
+	mc-next-class: note;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	font-size: 12pt;
+	mc-auto-number-format: "Note ";
+	background-size: 8mm;
+	line-height: 9mm;
+	padding-left: 10mm;
+	background-position: 0px 1px;
+	padding-top: 1px;
+	mc-hidden: hidden;
+	background-image: url("../Graphics/Symbol/info_phosphor_blue.svg");
+}
+
+p.Safety_caution
+{
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	mc-next-class: safety_heading;
+	mc-next-tag: p;
+	text-transform: uppercase;
+	padding-top: 3mm;
+	padding-left: 15mm;
+	font-size: 12pt;
+	background-position: left top;
+	line-height: 9mm;
+	mc-auto-number-format: "CAUTION";
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+	mc-hidden: hidden;
+}
+
+p.safety_danger
+{
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	margin-left: 0;
+	mc-next-class: safety_heading;
+	mc-next-tag: p;
+	text-transform: uppercase;
+	font-size: 12pt;
+	background-position: left top;
+	mc-auto-number-format: "DANGER";
+	padding-top: 3mm;
+	padding-left: 15mm;
+	line-height: 9mm;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+	mc-hidden: hidden;
+}
+
+p.safety_warning
+{
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	margin-left: 0;
+	padding-top: 3mm;
+	padding-left: 15mm;
+	mc-next-class: safety_heading;
+	mc-next-tag: p;
+	font-size: 12pt;
+	text-transform: uppercase;
+	background-position: left top;
+	mc-auto-number-format: "WARNING";
+	line-height: 9mm;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+	mc-hidden: hidden;
+}
+
+p.safety_notice
+{
+	mc-auto-number-position: inside-head;
+	margin-left: 0;
+	padding-top: 3mm;
+	mc-next-class: safety_heading;
+	mc-next-tag: p;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 12pt;
+	mc-auto-number-format: "NOTICE";
+	line-height: 16pt;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-hidden: hidden;
+}
+
+p.safety_attention
+{
+	mc-auto-number-position: inside-head;
+	margin-left: 0;
+	padding-top: 3mm;
+	mc-next-class: safety_heading;
+	mc-next-tag: p;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 12pt;
+	mc-auto-number-format: "ATTENTION";
+	line-height: 16pt;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-hidden: hidden;
+}
+
+span.autoNumTOC
+{
+	mc-hidden: hidden;
+}
+
+span.bold
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+span.code
+{
+	font-family: "Fira Code", "Courier New";
+}
+
+span.code_noHyphenation
+{
+	font-family: "Fira Code", "Courier New";
+	mc-hyphenate: never;
+}
+
+span.code_bold
+{
+	font-family: "Fira Code SemiBold", "Courier New";
+}
+
+span.gui
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	font-style: inherit;
+}
+
+span.guivar
+{
+	font-style: italic;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-hidden: hidden;
+}
+
+span.key
+{
+	font-variant: small-caps;
+}
+
+span.link
+{
+	mc-hidden: hidden;
+	text-decoration: none;
+	color: #164293;
+}
+
+span.symbol
+{
+	font-family: Symbol;
+}
+
+span.superscript
+{
+	vertical-align: super;
+	font-size: 70%;
+}
+
+@media CHM
+{
+	span.superscript
+	{
+		vertical-align: top;
+	}
+
+	p.figure_title
+	{
+		mc-auto-number-position: inside-head;
+		margin-left: 0mm;
+	}
+
+	p.equation_title
+	{
+		mc-auto-number-position: inside-head;
+		margin-left: 0mm;
+	}
+
+	p.table_title
+	{
+		mc-auto-number-position: inside-head;
+		margin-left: 0;
+	}
+
+	li.list2
+	{
+		margin-left: 5mm;
+	}
+
+	li.howto2_num
+	{
+		list-style-position: outside;
+	}
+
+	a
+	{
+		color: #164293;
+	}
+
+	p.list2_or
+	{
+		margin-left: -5mm;
+	}
+
+	MadCap|glossaryTerm.Expanding
+	{
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	MadCap|glossaryTerm
+	{
+		text-decoration: none;
+		mc-closed-image: url("../Graphics/Symbol/Plus_16px.svg");
+		mc-open-image: url("../Graphics/Symbol/minus_16px.svg");
+	}
+
+	span.link
+	{
+		color: #164293;
+	}
+
+	body
+	{
+		font-size: 100%;
+		font-family: Arial;
+	}
+
+	h1
+	{
+		color: #164293;
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	h2
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	h3
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	h4
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	h5
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	h6
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.table_default
+	{
+		font-family: Arial;
+	}
+
+	p.table_head
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.table_head_center
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	span.bold
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	span.gui
+	{
+		font-weight: bold;
+		font-family: Arial;
+	}
+
+	span.guivar
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.gloss_term
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.see
+	{
+		font-family: Arial;
+		font-weight: bold;
+		border-top-style: solid;
+		border-top-width: 1px;
+		margin-top: 18pt;
+		color: #164293;
+		border-top-color: #164293;
+		mc-next-class: paragraph;
+		mc-next-tag: p;
+	}
+
+	p.see_also
+	{
+		font-family: Arial;
+		font-weight: bold;
+		border-top-style: solid;
+		border-top-width: 1px;
+		margin-top: 18pt;
+		color: #164293;
+		border-top-color: #164293;
+		mc-next-class: paragraph;
+		mc-next-tag: p;
+		mc-auto-number-format: "{family Arial}{color #164293}See also {/color}{/family}";
+		mc-auto-number-position: inside-head;
+	}
+
+	p.safety_heading
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.Safety_caution
+	{
+		font-family: Arial;
+		font-weight: bold;
+		background-size: 10mm auto;
+	}
+
+	p.safety_danger
+	{
+		font-family: Arial;
+		font-weight: bold;
+		background-size: 10mm auto;
+	}
+
+	p.safety_notice
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.safety_attention
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.safety_var
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.safety_warning
+	{
+		font-family: Arial;
+		font-weight: bold;
+		background-size: 10mm auto;
+	}
+
+	p.note_Header
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.table_head_eng
+	{
+		font-weight: bold;
+		font-family: Arial;
+	}
+
+	a:focus
+	{
+		font-family: Arial;
+	}
+
+	div.GlossaryPageDefinition
+	{
+		font-family: Arial;
+	}
+
+	div.GlossaryPageHeading
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	div.GlossaryPageTerm
+	{
+		font-family: Arial;
+	}
+
+	MadCap|codeSnippetBody
+	{
+		font-family: "Fira Code", "Courier New";
+	}
+
+	MadCap|codeSnippetCaption
+	{
+		font-family: Arial;
+	}
+
+	MadCap|codeSnippetCopyButton
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	MadCap|popupBody
+	{
+		font-family: Arial;
+	}
+
+	MadCap|popupHead
+	{
+		font-family: Arial;
+	}
+
+	p.copyright
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.h5_like
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.how_to_title
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	p.MiniTOC1
+	{
+		font-family: Arial;
+	}
+
+	span.bold_safety
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	MadCap|glossaryTerm.Popup
+	{
+		font-weight: normal;
+	}
+
+	/*Styles the box of text popups*/
+
+	.popupBody
+	{
+		mc-hidden: hidden;
+		font-family: Arial;
+		color: #5a646e;
+		background-color: #ffffff;
+		margin: 0px;
+		padding: 5px;
+	}
+
+	.MCTextPopupBody
+	{
+		mc-hidden: hidden;
+		font-weight: normal;
+		width: 200px;
+		padding: 11px 15px;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border: none !important;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		position: absolute;
+		left: 20px;
+		white-space: normal;
+		filter: none;
+		display: none;
+		opacity: none;
+		z-index: 10001;
+		min-width: min-content;
+		line-height: 1.4;
+		background-color: #ffffff;
+		color: #5a646e;
+	}
+
+	/*Styles the triangle on the top of the popup window of glossary terms*/
+
+	.MCTextPopupArrow
+	{
+		border-bottom-color: black;
+		mc-hidden: hidden;
+	}
+
+	MadCap|expandingBody
+	{
+		color: #000000;
+		border-left-color: #164293;
+		border-left: solid 2px #164293;
+		background-color: #e8ecf4;
+	}
+
+	MadCap|expandingHead
+	{
+		color: #164293;
+	}
+
+	p.safety_howto
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+	}
+
+	MadCap|toggler.example
+	{
+		font-family: Arial;
+		font-weight: bold;
+	}
+
+	div.example
+	{
+		mc-auto-number-format: "{family Arial}{b}{color #164293}EXAMPLE {/color}{/b}{/family}";
+	}
+}
+
+@media HTML5
+{
+	p.Safety_caution
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol.png");
+	}
+
+	p.safety_danger
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol.png");
+	}
+
+	p.safety_warning
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol.png");
+	}
+
+	span.superscript
+	{
+		vertical-align: super;
+	}
+
+	a
+	{
+		color: #164293;
+	}
+
+	MadCap|dropDownBody
+	{
+		
+	}
+
+	ol
+	{
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	p.howto_or
+	{
+		margin-left: -4mm;
+	}
+
+	MadCap|miniTocProxy
+	{
+		display: block;
+		list-style-type: none;
+	}
+
+	div.MCMiniTocBox_0
+	{
+		list-style-type: none;
+		display: block;
+	}
+
+	MadCap|miniTocProxy.miniToc_list
+	{
+		display: block;
+	}
+
+	span.link
+	{
+		
+	}
+
+	img.howto
+	{
+		
+	}
+
+	img.howto2
+	{
+		
+	}
+
+	MadCap|popupBody
+	{
+		font-family: "Manrope", Arial;
+	}
+
+	MadCap|popupHead
+	{
+		font-family: "Manrope", Arial;
+	}
+
+	p.copyright
+	{
+		font-family: "Manrope ExtraBold", Arial;
+	}
+
+	p.gloss_term
+	{
+		
+	}
+
+	p.how_to_title
+	{
+		font-family: "Manrope SemiBold", Arial;
+	}
+
+	p.MiniTOC1
+	{
+		
+	}
+
+	p.note_Header
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.Safety_caution
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.safety_danger
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.safety_heading
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.safety_notice
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.safety_attention
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.safety_var
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.safety_warning
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.see
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.see_also
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.table_head
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.table_head_center
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	p.table_head_eng
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	span.bold
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	span.bold_safety
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	span.gui
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	span.guivar
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	}
+
+	div.GlossaryPageDefinition
+	{
+		font-family: "Manrope", Arial;
+		font-size: 1rem;
+		margin-left: 30px;
+	}
+
+	div.GlossaryPageHeading
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+		margin-left: 0;
+	}
+
+	div.GlossaryPageTerm
+	{
+		font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+		margin-left: 0;
+	}
+
+	a:link
+	{
+		color: #164293;
+		text-decoration: none;
+	}
+
+	a:visited
+	{
+		text-decoration: none;
+	}
+
+	a:hover
+	{
+		color: #4568a9;
+		text-decoration: none;
+	}
+
+	img.left
+	{
+		max-height: auto;
+	}
+
+	p.table_default
+	{
+		font-size: 1rem;
+		line-height: 14pt;
+		font-family: "Manrope", Arial;
+	}
+
+	p.table_default_center
+	{
+		
+	}
+
+	p.table_default_right
+	{
+		
+	}
+
+	h1.heading_list
+	{
+		
+	}
+
+	h1.heading_toc
+	{
+		
+	}
+
+	li.howto_num
+	{
+		margin-left: 15mm;
+	}
+
+	li.list_num
+	{
+		margin-left: 15mm;
+	}
+
+	li.howto_result
+	{
+		margin-left: 15mm;
+	}
+
+	div.example
+	{
+		mc-auto-number-position: inside-head;
+	}
+
+	a.GlossaryPageTerm
+	{
+		color: #164293;
+		font-size: 1rem;
+	}
+
+	MadCap|glossaryTerm
+	{
+		color: #164293;
+		text-decoration: none;
+	}
+
+	MadCap|glossaryProxy
+	{
+		list-style-type: none;
+	}
+
+	MadCap|popup
+	{
+		background: #ffffff;
+		border-radius: 4px;
+	}
+
+	MadCap|xref
+	{
+		color: #164293;
+	}
+
+	img.Icon
+	{
+		max-height: 22px;
+		max-width: auto;
+	}
+}
+
+span.subscript
+{
+	vertical-align: sub;
+	font-size: 70%;
+}
+
+span.italic
+{
+	font-style: italic;
+}
+
+span.review
+{
+	color: #ff00ff;
+	background: #ffefd5;
+}
+
+li.list
+{
+	list-style-position: outside;
+	list-style-type: none;
+	margin-left: 15mm;
+	list-style-image: url("../Graphics/Symbol/indent.svg");
+}
+
+li.list2
+{
+	background-image: none;
+	text-indent: 0px;
+	margin-left: 5mm;
+	list-style-type: disc;
+	list-style-image: none;
+}
+
+li.howto2
+{
+	list-style-position: outside;
+	background-image: none;
+	text-indent: 0px;
+	mc-hidden: hidden;
+	margin-left: 5mm;
+	list-style-type: disc;
+	list-style-image: none;
+}
+
+li.howto2_num
+{
+	list-style-type: lower-roman;
+	list-style-position: outside;
+	margin-left: 5mm;
+	background-image: none;
+	text-indent: 0px;
+	list-style-image: none;
+}
+
+li.howto
+{
+	list-style-position: outside;
+	list-style-type: none;
+	mc-hidden: hidden;
+	list-style-image: url("../Graphics/Symbol/indent.svg");
+	margin-left: 15mm;
+}
+
+p.see
+{
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-top: 18pt;
+	color: #164293;
+	border-top-color: #164293;
+	mc-next-class: paragraph;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.see_also
+{
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-top: 18pt;
+	color: #164293;
+	border-top-color: #164293;
+	mc-next-class: paragraph;
+	mc-next-tag: p;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	mc-auto-number-format: "{family Manrope ExtraBold}{color #164293}See also {/color}{/family}";
+	mc-auto-number-position: inside-head;
+}
+
+p.list
+{
+	mc-next-tag: p;
+	mc-next-class: list;
+	margin-left: 0;
+}
+
+li.list2_num
+{
+	list-style-position: outside;
+	list-style-type: lower-alpha;
+	margin-left: 5mm;
+	background-image: none;
+	text-indent: 0px;
+	list-style-image: none;
+}
+
+p.howto
+{
+	margin-left: 0;
+	mc-next-tag: p;
+	mc-next-class: howto;
+	mc-hidden: hidden;
+}
+
+MadCap|xref.PageNum
+{
+	color: #164293;
+}
+
+MadCap|xref.PageNum:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.PageNum:visited
+{
+	color: #164293;
+}
+
+MadCap|expandingHead.code_bold
+{
+	font-weight: 600;
+	font-family: "Fira Code", "Courier New";
+	mc-hidden: hidden;
+}
+
+li.table_list2
+{
+	list-style-position: outside;
+	background-image: none;
+	text-indent: 0px;
+	margin-left: 5mm;
+	list-style-image: none;
+	list-style-type: disc;
+}
+
+li.table_list_num
+{
+	list-style-type: upper-alpha;
+	background-image: none;
+	text-indent: 0px;
+	list-style-image: inherit;
+	margin-left: 5mm;
+}
+
+p.howto_or
+{
+	font-style: italic;
+	margin-left: -4mm;
+	mc-hidden: hidden;
+	line-height: 1.4;
+}
+
+img.safetyVar
+{
+	padding-right: 2mm;
+	height: 10mm;
+	width: auto;
+}
+
+span.bold_safety
+{
+	text-transform: uppercase;
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+img.left
+{
+	max-height: auto;
+}
+
+img.howto
+{
+	max-height: auto;
+	mc-hidden: hidden;
+}
+
+img.list
+{
+	max-height: auto;
+}
+
+img.list2
+{
+	max-height: auto;
+}
+
+h1.heading_toc	/*Heading for the generated table of contents in PDF documents*/
+{
+	margin-bottom: 10pt;
+	mc-hidden: hidden;
+	line-height: 1.4;
+	font-size: 1.5rem;
+}
+
+img.wide
+{
+	max-height: auto;
+}
+
+MadCap|xref.Heading_only
+{
+	mc-format: "{paratext}";
+	color: #164293;
+}
+
+MadCap|xref.Heading_only:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.Heading_only:visited
+{
+	color: #164293;
+}
+
+p.code1
+{
+	font-family: "Fira Code", "Courier New";
+	margin-left: 3mm;
+	mc-next-tag: p;
+	mc-next-class: code1;
+}
+
+span.code_green_008000
+{
+	font-family: "Fira Code", "Courier New";
+	color: #008000;
+}
+
+span.code_blue_0000ff
+{
+	font-family: "Fira Code", "Courier New";
+	color: #0000ff;
+}
+
+span.code_green_008080
+{
+	font-family: "Fira Code", "Courier New";
+	color: #008080;
+}
+
+span.code_brown_804000
+{
+	font-family: "Fira Code", "Courier New";
+	color: #804000;
+}
+
+span.code_orange_ff8000
+{
+	font-family: "Fira Code", "Courier New";
+	color: #ff8000;
+}
+
+span.code_purple_8000ff
+{
+	font-family: "Fira Code", "Courier New";
+	color: #8000ff;
+}
+
+span.code_purple_a020f0
+{
+	font-family: "Fira Code", "Courier New";
+	color: #a020f0;
+}
+
+span.code_green_228b22
+{
+	font-family: "Fira Code", "Courier New";
+	color: #228b22;
+}
+
+ul.table
+{
+	margin-top: 6pt;
+}
+
+MadCap|dropDown.table
+{
+	margin-top: 6pt;
+	margin-left: 0mm;
+}
+
+span.noHyphenation
+{
+	mc-hyphenate: never;
+}
+
+span.noLanguage
+{
+	mc-language: none;
+}
+
+p.table_code
+{
+	font-family: "Fira Code", "Courier New";
+	margin-top: 6pt;
+	margin-bottom: 0;
+	margin-left: 0;
+	mc-next-class: table_code;
+	mc-next-tag: p;
+	line-height: 1.4;
+}
+
+MadCap|xref.PageNum_static
+{
+	color: #164293;
+}
+
+MadCap|xref.PageNum_static:hover
+{
+	color: #4568a9;
+}
+
+MadCap|xref.PageNum_static:visited
+{
+	color: #164293;
+}
+
+span.code_italic
+{
+	font-family: "Fira Code", "Courier New";
+	font-style: italic;
+}
+
+span.quotes
+{
+	mc-hidden: hidden;
+}
+
+span.quotes::before
+{
+	content: '"';
+}
+
+span.quotes::after
+{
+	content: '"';
+}
+
+li.howto img.wide
+{
+	
+}
+
+li.howto_num img.wide
+{
+	
+}
+
+li.howto2 img.wide
+{
+	
+}
+
+li.howto2_num img.wide
+{
+	
+}
+
+li.list img.wide
+{
+	
+}
+
+li.list_num img.wide
+{
+	
+}
+
+li.list2 img.wide
+{
+	
+}
+
+li.list2_num img.wide
+{
+	
+}
+
+p.header_l
+{
+	mc-hidden: hidden;
+}
+
+@media eclipse
+{
+	p.note_Header
+	{
+		background-image: url("../Graphics/Symbol/Info_Blue_transparent.png");
+	}
+
+	p.safety_warning
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+		background-size: 10mm auto;
+	}
+
+	p.safety_danger
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+		background-size: 10mm auto;
+	}
+
+	p.Safety_caution
+	{
+		background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_yellow_10mm_300ppi.png");
+		background-size: 10mm auto;
+	}
+}
+
+p.h5_like	/*looks like h5, but is no heading*/
+{
+	color: #333;
+	margin: 0;
+	margin-top: 16px;
+	mc-next-tag: p;
+	mc-next-class: paragraph;
+	margin-bottom: 16px;
+	text-align: left;
+	font-weight: normal;
+	font-family: "Manrope SemiBold", Arial;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+p.gui_title	/*title for gui explenations*/
+{
+	color: #000000;
+	margin-top: 12pt;
+	mc-next-tag: p;
+	mc-next-class: gloss_des;
+	margin-bottom: 4pt;
+	font-family: "Manrope SemiBold", Arial;
+	font-size: 1.1rem;
+	line-height: 1.4;
+}
+
+/*Stying for videos*/
+
+video
+{
+	width: 800px;
+	height: auto;
+}
+
+/*img.note
+{
+	padding-right: 2mm;
+	width: auto;
+	height: 6mm;
+}*/
+
+/*Style only for the footer used in pagelayouts*/
+
+p.product_sub
+{
+	mc-hidden: hidden;
+}
+
+/*Style for images to be displayed as popup*/
+
+img.thumbnail
+{
+	mc-thumbnail: popup;
+	/*defines the way the thumbnail opens*/
+	mc-thumbnail-max-width: auto;
+	mc-thumbnail-width: 100%;
+	mc-thumbnail-max-height: 150px;
+	mc-thumbnail-height: auto;
+}
+
+/*Defines the hover effect for the thumbnail images*/
+
+img.thumbnail:hover
+{
+	transform: scale(0.95);
+	/*Image gets scaled down*/
+	mc-hidden: hidden;
+}
+
+/*Styles all thumbnails which open as popup*/
+
+img.MCPopupThumbnail
+{
+	border-radius: 0px;
+	border: none;
+	mc-hidden: hidden;
+	transition: 0.4s;
+	/*slows down what is defined in img.thumbnail:hover*/
+	mc-hidden: hidden;
+	max-height: 150px;
+}
+
+/*Styles the full image of all images that open as popup*/
+
+img.MCPopupFullImage
+{
+	mc-hidden: hidden;
+	padding: 0px;
+	outline: 0px;
+	border: 0px;
+	border-radius: 0px;
+	mc-hidden: hidden;
+}
+
+/*Styles the container of the full image of all images that open as popup*/
+
+div.MCPopupContainer
+{
+	padding: 0px;
+	border: none;
+	border-radius: 0px;
+	mc-hidden: hidden;
+}
+
+/*Style used for examples. Can only be used for usecases where the content is short an no paragraph break is needed.
+
+p.example
+{
+	mc-auto-number-format: '{family Manrope ExtraBold}{color #164293}EXAMPLE {/color}{/family}';
+}
+*/
+
+/*Styles the div used for examples*/
+
+div.example
+{
+	mc-auto-number-format: "{b}{color #164293}EXAMPLE {/color}{/b}";
+	/*Automatically puts the word at the top of the div*/
+	border: solid 1px #a7a7a7;
+	border-radius: 8px;
+	mc-auto-number-position: inside-head;
+	padding: 8px 16px;
+	margin: 16px 8px;
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+/* Styles für die Safety Messages */
+/* Für den Text in der Box */
+
+div.Danger p:first-of-type,
+div.Warning p:first-of-type,
+div.Caution p:first-of-type,
+div.Note p:first-of-type,
+div.Attention p:first-of-type,
+div.Notice p:first-of-type
+{
+	margin-top: 16px;
+}
+
+div.Danger p,
+div.Warning p,
+div.Caution p,
+div.Attention p,
+div.Note p,
+div.Notice p
+{
+	box-sizing: border-box;
+	/* Padding und Border in die Gesamtgröße einbeziehen */
+	word-wrap: break-word;
+	/* Längere Wörter umbrechen */
+}
+
+/* Für den Heading Text (WARNING, DANGER.. etc.) */
+
+div.Danger::first-line,
+div.Warning::first-line,
+div.Caution::first-line,
+div.Note::first-line
+{
+	font-family: "Manrope", sans-serif;
+	/* Schriftart */
+	font-weight: 600;
+	/* SemiBold */
+	font-size: 24px;
+	/* Schriftgröße */
+	text-transform: uppercase;
+	/* Großbuchstaben */
+}
+
+div.Notice::first-line,
+div.Attention::first-line
+{
+	font-family: "Manrope", sans-serif;
+	/* Schriftart */
+	font-weight: 600;
+	/* SemiBold */
+	font-size: 24px;
+	/* Schriftgröße */
+	text-transform: uppercase;
+	/* Großbuchstaben */
+	font-style: italic;
+	/* Kursiv */
+}
+
+/* Nochmal genaueres Selektieren des Heading Texts um ihn zu verschieben */
+
+div.Warning .autonumber
+{
+	margin-left: 55px;
+	/* 29px Startpunkt */
+}
+
+div.Danger .autonumber
+{
+	margin-left: 55px;
+	/* 35px Startpunkt */
+}
+
+div.Caution .autonumber
+{
+	margin-left: 55px;
+	/* 32px Startpunkt */
+}
+
+div.Note .autonumber
+{
+	margin-left: 47.5px;
+	/* 27.5 Startpunkt */
+}
+
+/* Erstellen der divs und festlegung der Icons und Heading Text */
+
+div.Warning
+{
+	mc-auto-number-format: "WARNING";
+	mc-auto-number-position: inside-head;
+	border-radius: 8px;
+	border: solid 1px #a7a7a7;
+	background-color: white;
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_caution.svg");
+	background-repeat: no-repeat;
+	background-size: 37.8px 37.8px;
+	background-position: 20px 26.1px;
+	/* 10.1px ist Startpunkt von Y-Achse */
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 33.2px 20px 0px 20px;
+	/* 13.2px ist der Startpunkt von Top, p hat von flare aus eine margin-bottom von 12px. */
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+/* Erstellen des Balkens oben in der div mit der gewünschten Farbe */
+
+div.Warning::before
+{
+	content: "";
+	display: block;
+	background-color: #ff7900;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+div.Danger
+{
+	mc-auto-number-format: "DANGER";
+	mc-auto-number-position: inside-head;
+	border-radius: 8px;
+	border: solid 1px #a7a7a7;
+	background-color: white;
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_caution.svg");
+	background-repeat: no-repeat;
+	background-size: 37.8px 37.8px;
+	background-position: 20px 26.1px;
+	/* 10.1px ist Startpunkt von Y-Achse */
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 33.2px 20px 0px 20px;
+	/* 13.2px ist der Startpunkt von Top, p hat von flare aus eine margin-bottom von 12px. */
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+div.Danger::before
+{
+	content: "";
+	display: block;
+	background-color: #bd2024;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+div.Caution
+{
+	mc-auto-number-format: "CAUTION";
+	mc-auto-number-position: inside-head;
+	border-radius: 8px;
+	border: solid 1px #a7a7a7;
+	background-color: white;
+	background-image: url("../Graphics/Symbol/SafetySymbol_ISO_ANSI_caution.svg");
+	background-repeat: no-repeat;
+	background-size: 37.8px 37.8px;
+	background-position: 20px 26.1px;
+	/* 10.1px ist Startpunkt von Y-Achse */
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 33.2px 20px 0px 20px;
+	/* 13.2px ist der Startpunkt von Top, p hat von flare aus eine margin-bottom von 12px. */
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+div.Caution::before
+{
+	content: "";
+	display: block;
+	background-color: #ffe100;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+div.Attention
+{
+	mc-auto-number-format: "ATTENTION";
+	mc-auto-number-position: inside-head;
+	border-radius: 8px;
+	border: solid 1px #a7a7a7;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 33.2px 20px 0px 20px;
+	/* 13.2px ist der Startpunkt von Top, p hat von flare aus eine margin-bottom von 12px. */
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+div.Attention::before
+{
+	content: "";
+	display: block;
+	background-color: #004488;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+div.Notice
+{
+	mc-auto-number-format: "NOTICE";
+	mc-auto-number-position: inside-head;
+	border-radius: 8px;
+	border: solid 1px #a7a7a7;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 33.2px 20px 0px 20px;
+	/* 13.2px ist der Startpunkt von Top, p hat von flare aus eine margin-bottom von 12px. */
+	max-width: 1200px;
+	/* Maximale Breite */
+	min-width: 100px;
+	/* Minimale Breite */
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+div.Notice::before
+{
+	content: "";
+	display: block;
+	background-color: #004488;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+div.Note
+{
+	mc-auto-number-format: "Note";
+	mc-auto-number-position: inside-head;
+	border-radius: 8px;
+	border: solid 1px #a7a7a7;
+	background-color: white;
+	background-image: url("../Graphics/Symbol/info_phosphor_blue.svg");
+	background-repeat: no-repeat;
+	background-size: 38.8px 38.8px;
+	background-position: 28.4px 13px;
+	/* 8.4px Startpunkt für X-Achse, -3px für Y */
+	overflow: hidden;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px 20px 0px 33.2px;
+	/* 13.2px ist der Startpunkt von left, p hat von flare aus eine margin-bottom von 12px. */
+	max-width: 1200px;
+	min-width: 100px;
+	width: fit-content;
+	/* Passt sich dem Inhalt an */
+}
+
+div.Note::before
+{
+	content: "";
+	display: block;
+	background-color: #007bc2;
+	width: 12px;
+	/* Breite des Balkens */
+	height: 100%;
+	/* Volle Höhe der Box */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Styles the "to the top button"*/
+
+#myBtn
+{
+	mc-hidden: hidden;
+	display: none;
+	position: fixed;
+	bottom: 57px;
+	right: max(calc((100% - 1330px) / 2 - 70px), 20px);
+	z-index: 99;
+	font-size: 40px;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	color: #555;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: rgba(255, 255, 255, 0.7);
+	/*Last value is opacity 70%*/
+	background-size: 50px;
+	background-image: url(../Graphics/Symbol/220805_ETAS_Icon_Arrow_Up.png);
+	height: 50px;
+	width: 50px;
+	transition: 0.3s;
+}
+
+/* Styles the "to the top button" when hovered above*/
+
+#myBtn:hover
+{
+	background-color: rgba(255, 255, 255, 0.7);
+	/*Last value is opacity 70%*/
+	background-size: 50px;
+	background-image: url(../Graphics/Symbol/ETAS_Icon_Arrow_Up_color.png);
+	mc-hidden: hidden;
+}
+
+/*Styles the box of text popups*/
+
+.popupBody
+{
+	mc-hidden: hidden;
+	font-family: "Manrope ", Arial;
+	color: #5a646e;
+	background-color: #ffffff;
+	border-radius: 20px;
+	margin: 0px;
+	padding: 5px;
+}
+
+.MCTextPopupBody
+{
+	mc-hidden: hidden;
+	font-weight: normal;
+	width: 200px;
+	padding: 11px 15px;
+	-webkit-box-shadow: 0 4px 10px #8b9299;
+	-moz-box-shadow: 0 4px 10px #8b9299;
+	box-shadow: 0px 2px 8px 0px #8b9299;
+	border: none !important;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: absolute;
+	left: 20px;
+	white-space: normal;
+	filter: alpha(opacity = 0);
+	display: none;
+	opacity: 0;
+	z-index: 10001;
+	min-width: min-content;
+	line-height: 1.4;
+	color: #5a646e;
+}
+
+div.indent
+{
+	margin-left: 10mm;
+}
+
+/*Styles the input field of the search bar of the HTML_Side skin*/
+
+.search-bar .search-field
+{
+	padding-right: 60px;
+	mc-hidden: hidden;
+}
+
+/*Prevents outlines on search bar when focused*/
+
+input[type="search"]:focus
+{
+	outline: none;
+	mc-hidden: hidden;
+}
+
+/*Prevents the indent from appearing in the filter drop down list*/
+
+.search-filter-content ul li
+{
+	list-style: none;
+	mc-hidden: hidden;
+}
+
+/*Styles the head of the dropdown when focused*/
+
+.dropDownHotspot:focus
+{
+	color: #4568a9;
+	mc-hidden: hidden;
+}
+
+/*Styles the triangle on the top of the popup window of glossary terms*/
+
+.MCTextPopupArrow
+{
+	border-bottom-color: #8b929961;
+	mc-hidden: hidden;
+}
+
+/*Styles the list of glossary entries*/
+
+li.GlossaryPageEntry
+{
+	list-style-type: none;
+	list-style-image: none;
+}
+
+MadCap|snippetBlock.inTable
+{
+	margin-top: 0pt;
+}
+
+MadCap|toggler.example
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+/*Keeps container title bar to max width*/
+
+.off-canvas-wrapper-inner nav.title-bar .outer-row
+{
+	max-width: 1330px;
+	width: 100%;
+	/*Breite des title containers*/
+}
+
+/*Keeps whole main section to max width*/
+
+.inner-wrap .main-section > .outer-row
+{
+	max-width: 1330px;
+	padding: 0;
+}
+
+.title-bar
+{
+	width: 100%;
+}
+
+/*Container main content
+
+.off-canvas-wrapper-inner .outer-row
+{
+	padding-left: 0em;
+	max-width: 1300px;
+	padding-right: 0em;
+}
+
+/*Product name in header*/
+
+.logo-wrapper::after
+{
+	content: "Data Operator V1.2";
+	font-family: "Manrope";
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	margin-left: 16px;
+	color: white;
+}
+
+/*Logo as SVG in header*/
+
+.title-bar-layout a.logo
+{
+	border: none;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+	display: block;
+	width: 64px;
+	height: 16px;
+	align-self: center;
+	background: transparent url("../Graphics/Symbol/ETAS_Logo_White.svg") no-repeat center center;
+	background-size: auto 16px;
+}
+
+/*Padding around the body container*/
+
+.body-container
+{
+	padding: 12px;
+}
+
+#mc-main-content
+{
+	padding-bottom: 70px;
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+/* Footer */
+
+.container-footer
+{
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 16px;
+	flex-grow: 1;
+}
+
+.container-footer-template
+{
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0px 16px;
+	flex-grow: 1;
+}
+
+.footer1
+{
+	display: block;
+	font-family: "Manrope SemiBold";
+	font-size: 14px;
+	line-height: 22px;
+	border-top: 1px solid #dee0e2;
+	background-color: #fafafa;
+	width: 100%;
+}
+
+.footer1.fixed
+{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.footer-content
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 44px;
+	gap: 16px;
+}
+
+.footer-left,
+.footer-right
+{
+	display: flex;
+	gap: 16px;
+}
+
+.copyright
+{
+	font-family: "Manrope";
+	font-size: 14px;
+}
+
+.footer1 a,
+.footer2 a
+{
+	color: #5a646e;
+	text-decoration: none;
+}
+
+.footer1 a:hover,
+.footer2 a:hover
+{
+	color: #4568a9;
+}
+
+/* Sidebar Footer ist standardmäßig ausgeblendet */
+
+.footer2
+{
+	display: none;
+	font-family: "Manrope SemiBold";
+	font-size: 14px;
+	line-height: 22px;
+	border-top: 1px solid #dee0e2;
+	background-color: #fafafa;
+	width: 100%;
+}
+
+/*Styles the header of the HTML_Side skin*/
+/* Drop-down versioning etas.docs */
+
+.version-dropdown
+{
+	position: relative;
+	display: inline-block;
+}
+
+.current-version
+{
+	cursor: pointer;
+	font-family: "Manrope SemiBold";
+	/* Schriftart anpassen */
+	font-size: 14px;
+	/* Schriftgröße anpassen */
+	color: #5a646e;
+	/* Textfarbe anpassen */
+}
+
+.dropdown-content
+{
+	display: none;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	background-color: #ffffff;
+	min-width: 160px;
+	border-radius: 4px;
+	border: 1px solid #eeeff0;
+	z-index: 1000;
+	bottom: 100%;
+	margin-bottom: 11px;
+}
+
+.dropdown-content a
+{
+	color: #5a646e;
+	/* Linkfarbe anpassen */
+	padding: 8px 16px;
+	text-decoration: none;
+	display: block;
+	font-family: "Manrope SemiBold";
+	/* Schriftart anpassen */
+	font-size: 14px;
+	/* Schriftgröße anpassen */
+	line-height: 22px;
+	/* Zeilenhöhe anpassen */
+}
+
+.dropdown-content a.active
+{
+	color: #164293;
+}
+
+.current-version:hover
+{
+	color: #4568a9 !important;
+}
+
+.show-dropdown
+{
+	display: block !important;
+	visibility: visible !important;
+	position: absolute !important;
+	/* Falls position geändert wurde */
+	/*bottom: 44px; !important*/
+	left: 0 !important;
+	z-index: 1000 !important;
+	/* Höher als andere Elemente */
+}
+
+/* Ab einer bestimmten Bildschirmbreite */
+
+@media (min-width: 1279px)
+{
+	.footer1
+	{
+		display: none;
+		/* Verstecke den Standard-Footer */
+	}
+
+	.footer2
+	{
+		display: block;
+		/* Zeige den großen Footer */
+	}
+}
+
+@media (max-width: 800px)
+{
+	.footer1,
+	.footer2
+	{
+		height: auto;
+		padding: 8px 0;
+	}
+
+	.copyright
+	{
+		line-height: 44px;
+	}
+
+	.footer-content
+	{
+		flex-direction: column;
+		align-items: center;
+		gap: 2px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.footer-left,
+	.footer-right
+	{
+		line-height: 44px;
+		display: block;
+		text-align: center;
+	}
+
+	.footer1 a
+	{
+		display: block;
+		margin: 2px 0;
+		line-height: 44px;
+	}
+}
+
+/*Styles the header*/
+
+nav.title-bar
+{
+	background-image: linear-gradient(
+    to right,
+    var(--ETAScolor1),
+    var(--ETAScolor2)
+  );
+	mc-hidden: hidden;
+	height: 56px;
+	padding: 8px 16px;
+}
+
+/*Styles the box of the TOC of the HTML_Side skin*/
+
+.sidenav-wrapper
+{
+	min-width: 400px;
+	width: 20%;
+	mc-hidden: hidden;
+}
+
+/*Indents the logo by 50px so the burger menu can be displayed on the left*/
+
+@media only screen and (max-width: 1279px)
+{
+	.title-bar-layout a.logo
+	{
+		margin-left: 40px;
+	}
+
+	#myBtn
+	{
+		right: 20px;
+		/* Standard-Padding für kleinere Bildschirme */
+	}
+
+	nav.title-bar
+	{
+		background-image: linear-gradient(
+      to right,
+      var(--ETAScolor1),
+      var(--ETAScolor2)
+    );
+		mc-hidden: hidden;
+		height: auto;
+	}
+
+	/*Sets the border radius for the bacground hover of TOC items on small screens*/
+
+	ul.off-canvas-list ul > li > a:hover
+	{
+		background-color: #d0d9e9;
+		border-radius: 20px;
+	}
+
+	ul.off-canvas-list li a:hover
+	{
+		color: #164293;
+		font-family: "Manrope SemiBold";
+		background-color: #d0d9e9;
+		border-radius: 20px;
+	}
+}
+
+p.Safety_caution
+{
+	background-image: url("../Graphics/Symbol/SafetySymbol.png");
+}
+
+p.safety_danger
+{
+	background-image: url("../Graphics/Symbol/SafetySymbol.png");
+}
+
+p.safety_warning
+{
+	background-image: url("../Graphics/Symbol/SafetySymbol.png");
+}
+
+span.superscript
+{
+	vertical-align: super;
+}
+
+a
+{
+	color: #164293;
+}
+
+MadCap|dropDownBody
+{
+	
+}
+
+ol
+{
+	padding-left: 0;
+	margin-left: 0;
+}
+
+p.howto_or
+{
+	margin-left: -4mm;
+}
+
+MadCap|miniTocProxy
+{
+	display: block;
+	list-style-type: none;
+}
+
+div.MCMiniTocBox_0
+{
+	list-style-type: none;
+	display: block;
+}
+
+MadCap|miniTocProxy.miniToc_list
+{
+	display: block;
+}
+
+span.link
+{
+	
+}
+
+img.howto
+{
+	
+}
+
+img.howto2
+{
+	
+}
+
+MadCap|popupBody
+{
+	font-family: "Manrope", Arial;
+}
+
+MadCap|popupHead
+{
+	font-family: "Manrope", Arial;
+}
+
+p.copyright
+{
+	font-family: "Manrope ExtraBold", Arial;
+}
+
+p.gloss_term
+{
+	
+}
+
+p.how_to_title
+{
+	font-family: "Manrope SemiBold", Arial;
+}
+
+p.MiniTOC1
+{
+	
+}
+
+p.note_Header
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.Safety_caution
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.safety_danger
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.safety_heading
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.safety_notice
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.safety_attention
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.safety_var
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.safety_warning
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.see
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.see_also
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.table_head
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.table_head_center
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+p.table_head_eng
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+span.bold
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+span.bold_safety
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+span.gui
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+span.guivar
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+}
+
+div.GlossaryPageDefinition
+{
+	font-family: "Manrope", Arial;
+	font-size: 1rem;
+	margin-left: 30px;
+}
+
+div.GlossaryPageHeading
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	margin-left: 0;
+}
+
+div.GlossaryPageTerm
+{
+	font-family: "Manrope ExtraBold", "Arial Rounded MT Bold";
+	margin-left: 0;
+}
+
+img.left
+{
+	max-height: auto;
+}
+
+p.table_default
+{
+	font-size: 1rem;
+	line-height: 14pt;
+	font-family: "Manrope", Arial;
+}
+
+p.table_default_center
+{
+	
+}
+
+p.table_default_right
+{
+	
+}
+
+h1.heading_list
+{
+	
+}
+
+h1.heading_toc
+{
+	
+}
+
+li.howto_num
+{
+	margin-left: 15mm;
+}
+
+li.list_num
+{
+	margin-left: 15mm;
+}
+
+li.howto_result
+{
+	margin-left: 15mm;
+}
+
+div.example
+{
+	mc-auto-number-position: inside-head;
+}
+
+a.GlossaryPageTerm
+{
+	color: #164293;
+	font-size: 1rem;
+}
+
+MadCap|glossaryTerm
+{
+	color: #164293;
+	text-decoration: none;
+}
+
+MadCap|glossaryProxy
+{
+	list-style-type: none;
+}
+
+MadCap|popup
+{
+	background: #ffffff;
+	border-radius: 4px;
+}
+
+MadCap|xref
+{
+	color: #164293;
+}
+
+img.Icon
+{
+	max-height: 22px;
+	max-width: auto;
+}
+
