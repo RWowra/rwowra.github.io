@@ -164,20 +164,27 @@ link.onclick = function (e) {
   const remainingPath = pathParts.slice(docsIndex + 3).join("/");
   const basePath = `/docs/${targetVersion}/${targetLanguage}/${remainingPath}`;
 
-  if (isVersion) {
-    const versionEntry = versions.find(v => v.version === targetVersion);
-    const landingPath = versionEntry
-      ? versionEntry.path.replace(`/${defaultLanguage}/`, `/${targetLanguage}/`)
-      : `/docs/${targetVersion}/${targetLanguage}/`;
+  const versionEntry = versions.find(v => v.version === targetVersion);
+  const landingEN = versionEntry?.path;
+  const landingLang = landingEN?.replace(`/${defaultLanguage}/`, `/${targetLanguage}/`);
 
+  if (isVersion) {
     fetch(basePath, { method: 'HEAD' }).then(res => {
       if (res.ok) {
         window.location.pathname = basePath;
       } else {
-        window.location.pathname = landingPath;
+        fetch(landingLang, { method: 'HEAD' }).then(res2 => {
+          if (res2.ok) {
+            window.location.pathname = landingLang;
+          } else {
+            window.location.pathname = landingEN;
+          }
+        }).catch(() => {
+          window.location.pathname = landingEN;
+        });
       }
     }).catch(() => {
-      window.location.pathname = landingPath;
+      window.location.pathname = landingEN;
     });
   } else {
     const languageFallback = `/docs/${targetVersion}/${defaultLanguage}/${remainingPath}`;
