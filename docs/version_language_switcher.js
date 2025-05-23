@@ -141,45 +141,58 @@ function initDropdown(currentEl, dropdownEl, isVersion) {
         : item.label;
 
       // Handle click on dropdown option
-      link.onclick = function (e) {
-        e.preventDefault();
+      
+link.onclick = function (e) {
+  e.preventDefault();
 
-        const pathParts = window.location.pathname.split("/");
-        const docsIndex = pathParts.indexOf("docs");
-        const currentVersion = pathParts[docsIndex + 1];
-        const currentLanguage = pathParts[docsIndex + 2];
-        const isLangValid = languages.some(lang => lang.code === currentLanguage);
+  const pathParts = window.location.pathname.split("/");
+  const docsIndex = pathParts.indexOf("docs");
+  const currentVersion = pathParts[docsIndex + 1];
+  const possibleLang = pathParts[docsIndex + 2];
+  const isLangValid = languages.some(lang => lang.code === possibleLang);
+  const currentLanguage = isLangValid ? possibleLang : defaultLanguage;
 
-        let targetVersion = currentVersion;
-        let targetLanguage = currentLanguage;
+  let targetVersion = currentVersion;
+  let targetLanguage = currentLanguage;
 
-        // Determine target version or language based on what is being switched
-        if (isVersion) {
-          targetVersion = item.version;
-        } else {
-          targetLanguage = item.code;
-        }
+  if (isVersion) {
+    targetVersion = item.version;
+  } else {
+    targetLanguage = item.code;
+  }
 
-        // Construct the new URL based on user selection
-        const remainingPath = pathParts.slice(docsIndex + (isLangValid ? 3 : 2)).join("/");
-        const basePath = `/docs/${targetVersion}/${targetLanguage}/${remainingPath}`;
-        const fallback = `/docs/${targetVersion}/${targetLanguage}/Content/Resources/Manual/LandingPage_DataOperator.htm`;
+  const remainingPath = pathParts.slice(docsIndex + 3).join("/");
+  const basePath = `/docs/${targetVersion}/${targetLanguage}/${remainingPath}`;
 
-        // Try loading the target page, or fall back to the language's landing page
-        fetch(basePath, { method: 'HEAD' }).then(res => {
-          if (res.ok) {
-            window.location.pathname = basePath;
-          } else {
-            // Fallback to default language landing page if target language not available
-            const finalFallback = `/docs/${targetVersion}/${defaultLanguage}/Content/Resources/Manual/LandingPage_DataOperator.htm`;
-            window.location.pathname = finalFallback;
-          }
-        }).catch(() => {
-          const finalFallback = `/docs/${targetVersion}/${defaultLanguage}/Content/Resources/Manual/LandingPage_DataOperator.htm`;
-          window.location.pathname = finalFallback;
-        });
+  if (isVersion) {
+    const versionEntry = versions.find(v => v.version === targetVersion);
+    const landingPath = versionEntry
+      ? versionEntry.path.replace(`/${defaultLanguage}/`, `/${targetLanguage}/`)
+      : `/docs/${targetVersion}/${targetLanguage}/`;
 
-      };
+    fetch(basePath, { method: 'HEAD' }).then(res => {
+      if (res.ok) {
+        window.location.pathname = basePath;
+      } else {
+        window.location.pathname = landingPath;
+      }
+    }).catch(() => {
+      window.location.pathname = landingPath;
+    });
+  } else {
+    const languageFallback = `/docs/${targetVersion}/${defaultLanguage}/${remainingPath}`;
+    fetch(basePath, { method: 'HEAD' }).then(res => {
+      if (res.ok) {
+        window.location.pathname = basePath;
+      } else {
+        window.location.pathname = languageFallback;
+      }
+    }).catch(() => {
+      window.location.pathname = languageFallback;
+    });
+  }
+};
+
 
       dropdownEl.appendChild(link);
     });
